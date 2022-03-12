@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="RSI_00">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../RSI_00/out/artifacts/RSI_00_jar/RSI_00.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

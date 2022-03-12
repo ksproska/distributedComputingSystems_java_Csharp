@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/RSI_00/RSI_00.iml" filepath="$PROJECT_DIR$/RSI_00/RSI_00.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/rozproszone_systemy.iml" filepath="$PROJECT_DIR$/.idea/rozproszone_systemy.iml" />
+    </modules>
+  </component>
+</project>
