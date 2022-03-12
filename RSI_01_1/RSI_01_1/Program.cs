@@ -13,20 +13,11 @@ namespace RSI_01_1
             {
                 var dateNow = DateTime.Now.ToString("yyyy'/'MM'/'dd' 'HH':'mm':'ss");
                 Console.WriteLine(dateNow);
-                Console.WriteLine("Kamila Sproska 254534!");
-                Console.WriteLine(Environment.UserName);
+                Console.WriteLine("Kamila Sproska 254534");
                 Console.WriteLine(Environment.OSVersion.VersionString);
-                Console.WriteLine("\n");
-
-                //Process p = new Process();
-                //p.StartInfo.UseShellExecute = false;
-                //p.StartInfo.RedirectStandardOutput = true;
-                //p.StartInfo.FileName = "java.exe";
-                //p.StartInfo.Arguments = "-version";
-                //p.Start();
-                //string output = p.StandardOutput.ReadToEnd();
-                //p.WaitForExit();
-                //Console.WriteLine(output);
+                Console.WriteLine(Environment.UserName);
+                Console.WriteLine(Environment.Version.ToString());
+                Console.WriteLine("IPs:");
 
                 var host = Dns.GetHostEntry(Dns.GetHostName());
                 foreach (var ip in host.AddressList)
