@@ -1,9 +1,11 @@
 import org.apache.xmlrpc.XmlRpcClient;
 import java.util.Vector;
 
-public class clientRPC {
+public class ClientRPC {
     public static void main(String[] args) {
+//        AC cb = new AC();
         try {
+            // TODO: xxx -> 10000 + numer komputera w laboratorium
             XmlRpcClient srv = new XmlRpcClient("http://localhost:xxx");
             Vector<Integer> params = new Vector<Integer>();
             params.addElement(new Integer(13));
