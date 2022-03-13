@@ -9,15 +9,15 @@ public class ClientRPC {
             XmlRpcClient srv = new XmlRpcClient("http://localhost:10000");
 
             AC cb = new AC();
-            Vector<Integer> params2 = new Vector<Integer>();
-            params2.addElement(new Integer(3000));
+            Vector<Integer> params2 = new Vector<>();
+            params2.addElement(3000);
             srv.executeAsync("MojSerwer.execAsy", params2, cb);
             System.out.println("Wywolano asynchronicznie");
 
             // upakowania parametrów dla wywołania metody echo,
-            Vector<Integer> params = new Vector<Integer>();
-            params.addElement(new Integer(13));
-            params.addElement(new Integer(21));
+            Vector<Integer> params = new Vector<>();
+            params.addElement(13);
+            params.addElement(21);
 
             // wywołania samej metody,
             Object result = srv.execute("MojSerwer.echo", params);

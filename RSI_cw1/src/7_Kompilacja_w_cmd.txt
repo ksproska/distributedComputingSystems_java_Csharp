@@ -1,0 +1,9 @@
+ServerRPC:  java -classpath "F:\rozproszone_systemy\xmlrpc-1.2-b1.jar" "F:\rozproszone_systemy\RSI_cw1\src\SerwerRPC.java"
+            java -classpath .;"F:\rozproszone_systemy\xmlrpc-1.2-b1.jar" SerwerRPC.java
+            java -classpath .;xmlrpc-1.2-b1.jar SerwerRPC.java
+
+ClientRPC:  javac -classpath .;"F:\rozproszone_systemy\xmlrpc-1.2-b1.jar" ClientRPC.java
+            javac -classpath .;xmlrpc-1.2-b1.jar ClientRPC.java
+
+            java -classpath .;"F:\rozproszone_systemy\xmlrpc-1.2-b1.jar" ClientRPC.java
+            java -classpath .;xmlrpc-1.2-b1.jar ClientRPC.java
