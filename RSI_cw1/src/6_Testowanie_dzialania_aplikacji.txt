@@ -1,0 +1,22 @@
+•  Uruchom serwer a następnie klienta w Eclipse
+
+F:\rozproszone_systemy\RSI_cw1\src>java -cp "F:\rozproszone_systemy\xmlrpc-1.2-b1.jar" "F:\rozproszone_systemy\RSI_cw1\src\SerwerRPC.java"
+Startuje serwer XML-RPC...
+Serwer wystartowal pomyslnie.
+Nasluchuje na porcie: 10000
+Aby zatrzymac serwer nacisnij ctrl+c
+
+•  Zwróć uwagę na kolejność i momenty wypisywania komunikatów. Zauważ, że po wywołaniu metody asynchronicznie,
+natychmiast wykonywane są kolejne instrukcje w kliencie i dopiero po pewnym czasie wywoływana jest zwrotnie metoda handleResult
+i wypisywany jest jej komunikat.
+
+ClientRPC:
+Wywolano asynchronicznie
+34
+handleResult(Object: 123, URL: http://localhost:10000, String: MOJSERWER.EXECASY)
+
+ServerRPC:
+... wywoĹ?ano asy - odliczam
+... asy - koniec odliczania
+
+•  Można zamienić kolejność wywoływani metod w kliencie (lub dopisać kolejne) aby zaobserwować działanie aplikacji.
