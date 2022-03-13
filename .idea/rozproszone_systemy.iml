@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="xmlrpc-1.2-b1" level="project" />
+    <orderEntry type="library" name="xmlrpc-1.2-b11" level="project" />
   </component>
 </module>
