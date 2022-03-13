@@ -6,7 +6,12 @@ public class ClientRPC {
         try {
             // kod utworzenia obiektu wywołania metody serwera,
             // TODO: 10000 -> 10000 + numer komputera w laboratorium
-            XmlRpcClient srv = new XmlRpcClient("http://localhost:10000");
+            String hamachi = "", localhost = "localhost";
+            int port = 10000;
+            XmlRpcClient srv = new XmlRpcClient(String.format("http://%s:%d",
+//                    hamachi,
+                    localhost,
+                    port));
 
             AC cb = new AC();
             Vector<Integer> params2 = new Vector<>();
