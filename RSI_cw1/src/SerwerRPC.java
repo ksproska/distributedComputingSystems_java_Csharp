@@ -31,7 +31,7 @@ public class SerwerRPC {
     public static void main(String[] args) {
         try {
             System.out.println("Startuje serwer XML-RPC...");
-            // TODO: xxx -> 10000 + numer komputera w laboratorium
+            // TODO: 10000 -> 10000 + numer komputera w laboratorium
             int port = 10000;
             WebServer server = new WebServer(port);
             //ponizej tworzy się obiekt swojej klasy serwera i uruchomia się go:

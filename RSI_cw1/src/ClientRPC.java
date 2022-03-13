@@ -4,16 +4,15 @@ import java.util.Vector;
 public class ClientRPC {
     public static void main(String[] args) {
         try {
-            // TODO: xxx -> 10000 + numer komputera w laboratorium
-
             // kod utworzenia obiektu wywołania metody serwera,
-            XmlRpcClient srv = new XmlRpcClient("http://localhost:xxx");
+            // TODO: 10000 -> 10000 + numer komputera w laboratorium
+            XmlRpcClient srv = new XmlRpcClient("http://localhost:10000");
 
-//            AC cb = new AC();
-//            Vector<Integer> params2 = new Vector<Integer>();
-//            params2.addElement(new Integer(3000));
-//            srv.executeAsync("MojSerwer.execAsy", params2, cb);
-//            System.out.println("Wywolano asynchronicznie");
+            AC cb = new AC();
+            Vector<Integer> params2 = new Vector<Integer>();
+            params2.addElement(new Integer(3000));
+            srv.executeAsync("MojSerwer.execAsy", params2, cb);
+            System.out.println("Wywolano asynchronicznie");
 
             // upakowania parametrów dla wywołania metody echo,
             Vector<Integer> params = new Vector<Integer>();
