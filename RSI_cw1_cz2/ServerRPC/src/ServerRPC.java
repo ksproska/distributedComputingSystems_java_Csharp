@@ -1,6 +1,6 @@
 import org.apache.xmlrpc.WebServer;
 
-import java.util.Arrays;
+import java.time.LocalDateTime;
 
 public class ServerRPC {
     private static final String SERVER_NAME = "ServerRPC";
@@ -16,6 +16,7 @@ public class ServerRPC {
                 Available methods for server:
                 1. max int int        - returns maximum value
                 2. charAt String int  - returns char at index of given text
+                3. setTimer int int   - returns array of int for seconds selected with the brake (val1) repeated (val2)
                 
                 To run async method add flag: -a
                 """;
@@ -27,28 +28,26 @@ public class ServerRPC {
 
     public String charAt(String text, int charInx) {
         if(text.length() <= charInx) {
+            // TODO: method cannot return null values
             return null;
         }
         return text.charAt(charInx) + "";
     }
 
-    /**
-     * Procedura asynchroniczna, będzie teoretycznie długo coś wykonywać,
-     * co zasymulowane będzie wstrzymaniem wykonywania na okres x milisekund
-     *
-     * @param x parametr podawany w wywołaniu procedury) metodą Thread.sleep(x)
-     * @return
-     */
-    public int execAsy(int x) {
-        System.out.println("... wywołano asy - odliczam");
+    public Integer[] setTimer(int everyXSec, int repeat) {
+//        System.out.println("Timer started...");
+        Integer[] arrayInt = new Integer[repeat];
         try {
-            Thread.sleep(x);
-        } catch(InterruptedException ex) {
-            ex.printStackTrace();
+            for (int i = 0; i < repeat; i++) {
+                Thread.sleep(1000L * everyXSec);
+                arrayInt[i] = LocalDateTime.now().getSecond();
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
             Thread.currentThread().interrupt();
         }
-        System.out.println("... asy - koniec odliczania");
-        return (123);
+//        System.out.println("... timer has finished.");
+        return arrayInt;
     }
 
     //------------------------------------------------------------------------------------------------------------------
