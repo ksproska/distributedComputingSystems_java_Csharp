@@ -1,12 +1,32 @@
 import org.apache.xmlrpc.WebServer;
 
+import java.util.Arrays;
+
 public class ServerRPC {
+    private static final String SERVER_NAME = "ServerRPC";
+    // TODO: 10000 -> 10000 + numer komputera w laboratorium
+    private static final int PORT = 10000;
 
     /**
-     * zwracała sumę dwóch zmiennych całkowitych podanych jako parametry wywołania metody
+     * Serwer  zawiera  usługę/procedurę  show,  która  podaje  informacje  o  dostępnych
+     * procedurach – wyświetla ich listę z opisem (nazwa procedury, parametry, krótki opis)
      */
-    public Integer echo(int x, int y) {
-        return x + y;
+    public String show() {
+        return """
+                Available methods for server:
+                1. max(int val1, int val2) - returns maximum value
+                """;
+    }
+
+    public Integer max(int val1, int val2) {
+        return Math.max(val1, val2);
+    }
+
+    public String charAt(String text, int charInx) {
+        if(text.length() <= charInx) {
+            return null;
+        }
+        return text.charAt(charInx) + "";
     }
 
     /**
@@ -28,23 +48,28 @@ public class ServerRPC {
         return (123);
     }
 
+    public static void startServer() {
+        WebServer server = new WebServer(PORT);
+        server.addHandler(SERVER_NAME, new ServerRPC());
+        server.start();
+    }
+
     public static void main(String[] args) {
         try {
-            System.out.println("Startuje serwer XML-RPC...");
-            // TODO: 10000 -> 10000 + numer komputera w laboratorium
-            int port = 10000;
-            WebServer server = new WebServer(port);
-            //ponizej tworzy się obiekt swojej klasy serwera i uruchomia się go:
-            server.addHandler("MojSerwer", new ServerRPC());
-            server.start();
-            System.out.println("Serwer wystartowal pomyslnie.");
-            System.out.println("Nasluchuje na porcie: " + port);
-            System.out.println("Aby zatrzymac serwer nacisnij ctrl+c");
+            System.out.println("""
+                    ________________________________
+                    Server XML-RPC is starting...
+                    """);
+            startServer();
+            System.out.printf("""
+                    Server has started successfully.
+                    PORT:      %s
+                    to finish: ctrl+c
+                    ________________________________
+                    """, PORT);
         }
         catch (Exception exception) {
-            System.err.println("Serwer XML-RPC: " + exception);
+            System.err.println("Server XML-RPC: " + exception);
         }
     }
 }
-
-// KAMILA STACJONARNY: java -cp "F:\rozproszone_systemy\xmlrpc-1.2-b1.jar" "F:\rozproszone_systemy\RSI_cw1\src\SerwerRPC.java"

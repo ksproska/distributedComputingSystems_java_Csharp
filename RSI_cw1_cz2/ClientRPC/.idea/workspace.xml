@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="672a1b2e-f519-48d0-9590-2dd32a5480dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/xmlrpc_1_2_b1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClientRPC.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClientRPC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerRPC/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerRPC/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerRPC/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerRPC/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerRPC/ServerRPC.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerRPC/src/ServerRPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw1/out/production/RSI_cw1/clientRPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw1/out/production/RSI_cw1/clientRPC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientRPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientRPC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerRPC/src/ServerRPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerRPC/src/ServerRPC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +38,27 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xmlrpc-1.2-b1.jar" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration name="ClientRPC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClientRPC" />
+      <module name="ClientRPC" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ClientRPC" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -60,6 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1647677368662</updated>
       <workItem from="1647677369787" duration="62000" />
+      <workItem from="1647677565157" duration="5951000" />
     </task>
     <servers />
   </component>
