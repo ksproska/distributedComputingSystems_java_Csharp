@@ -73,6 +73,15 @@ public class ClientRPC {
         public Integer max(int val1, int val2) { return null; }
         public String charAt(String text, int charInx) { return null; }
         public Integer[] setTimer(int everyXSec, int repeat) { return null; }
+        public void show() {}
+        public Integer distance() {
+            // TODO: correct parameter types and return type
+            return null;
+        }
+        public Integer myPrimes() {
+            // TODO: correct parameter types and return type
+            return null;
+        }
     }
 
     public void runCommand(String input) throws IOException, XmlRpcException {

@@ -50,6 +50,18 @@ public class ServerRPC {
         return arrayInt;
     }
 
+    public Integer distance() {
+        // TODO: zwraca odległość między dwoma punktami na powierzchni Ziemi.
+        //  Parametry tej metody to współrzędne geograficzne obu punktów
+        return -1;
+    }
+    public Integer myPrimes() {
+        // TODO: zwraca ilość liczb pierwszych w podanym przedziale [min, max]
+        //  oraz największą liczbę pierwszą mniejszą/równą max.
+        //  Sprawdzić/przetestować dla dużych wartości, np. min= 100000000 max=11000000
+        return -1;
+    }
+
     //------------------------------------------------------------------------------------------------------------------
 
     public static void startServer() {
