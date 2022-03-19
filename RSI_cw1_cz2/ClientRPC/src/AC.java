@@ -7,11 +7,21 @@ import java.net.URL;
 public class AC implements AsyncCallback {
     @Override
     public void handleResult(Object o, URL url, String s) {
-        System.out.printf("handleResult(Object: %s, URL: %s, String: %S)\n", o, url, s);
+        System.out.printf("""
+                Result:
+                \tObject result = %s;
+                \tMethod method = %s;
+                \tString URL    = %s;
+                """, o, s, url);
     }
 
     @Override
     public void handleError(Exception e, URL url, String s) {
-        System.out.printf("handleError(Exception: %s, URL: %s, String: %S)\n", e, url, s);
+        System.out.printf("""
+                Exception:
+                \tException error = %s;
+                \tMethod method   = %s;
+                \tString URL      = %s;
+                """, e, url, s);
     }
 }

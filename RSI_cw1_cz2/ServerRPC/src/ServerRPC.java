@@ -14,7 +14,8 @@ public class ServerRPC {
     public String show() {
         return """
                 Available methods for server:
-                1. max(int val1, int val2) - returns maximum value
+                1. max int int        - returns maximum value
+                1. charAt String int  - returns char at index of given text
                 """;
     }
 
@@ -47,6 +48,8 @@ public class ServerRPC {
         System.out.println("... asy - koniec odliczania");
         return (123);
     }
+
+    //------------------------------------------------------------------------------------------------------------------
 
     public static void startServer() {
         WebServer server = new WebServer(PORT);
