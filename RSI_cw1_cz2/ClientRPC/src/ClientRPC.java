@@ -34,9 +34,9 @@ public class ClientRPC {
         return String.format("%-" + n + "s", s);
     }
 
-    private void printResult(String methodName, Object result, Object ... methodArgs) {
+    public static void printResult(String methodName, Object result, Object ... methodArgs) {
         var args = Arrays.stream(methodArgs).map(Object::toString).collect(Collectors.joining(", "));
-        System.out.println(padRight(methodName + "(" + args + "):", 30) + result);
+        System.out.println(methodName + "(" + args + "): " + result);
     }
 
     private void printAsyncRun(String methodName, Object ... methodArgs) {
@@ -87,33 +87,61 @@ public class ClientRPC {
     }
 
     public static void main(String[] args) {
+        String asyncFlag = "-a";
         try {
             ClientRPC clientRPC = new ClientRPC();
             clientRPC.show();
+            System.out.print("Write command:\n-> ");
 
-//            Scanner in = new Scanner(System.in);
-//            String input = in.nextLine();
-//            var methods = ClientRPC.class.getMethods();
+            Scanner in = new Scanner(System.in);
+            String input = in.nextLine();
+            var methods = ClientRPC.class.getMethods();
 
-//            while (!Objects.equals(input, "end")) {
-//                var inputElems = input.split(" ");
-//                var methodName = inputElems[0];
-//                for (var method : methods) {
-//                    if (method.getName().equals(methodName)) {
-//                        var paramsClasses = method.getParameterTypes();
-//                        if(paramsClasses.length == inputElems.length - 1) {
-//                            var params =
-//                        }
-//                    }
-//                }
-//
-//                System.out.println(methodName);
-//                input = in.nextLine();
-//            }
-            clientRPC.max(2, 5);
-            clientRPC.charAt("Kamila Sproska", 3);
-//            clientRPC.execAsy(55000);
-            clientRPC.execAsy(3000);
+            while (!Objects.equals(input, "end")) {
+                boolean isAsync = input.contains(asyncFlag);
+                input = input.replace(" " + asyncFlag, "");
+                var inputElems = input.split(" ");
+                var methodName = inputElems[0];
+                String errorText = "No command matches input.";
+                for (var method : methods) {
+                    if (method.getName().equals(methodName)) {
+                        var paramsClasses = method.getParameterTypes();
+                        try {
+                            if (paramsClasses.length == inputElems.length - 1) {
+                                var params = new Object[paramsClasses.length];
+                                for (int i = 0; i < paramsClasses.length; i++) {
+//                                System.out.println(inputElems[i + 1].getClass());
+                                    if (paramsClasses[i] == int.class || paramsClasses[i] == Integer.class) {
+                                        params[i] = Integer.parseInt(inputElems[i + 1]);
+                                    } else {
+                                        params[i] = inputElems[i + 1];
+                                    }
+                                }
+                                if(isAsync) {
+                                    clientRPC.executeAsync(methodName, params);
+                                    errorText = null;
+                                }
+                                else {
+                                    var result = clientRPC.execute(methodName, params);
+                                    errorText = null;
+                                    printResult(methodName, result, params);
+                                }
+                            }
+                            else {
+                                errorText = "Expected number of parameters for method " + methodName.toUpperCase() + ": " + paramsClasses.length;
+                            }
+                        }
+                        catch (NumberFormatException exception) {
+                            errorText = "Expected parameter types for method " + methodName.toUpperCase() + ": " + Arrays.toString(paramsClasses);
+                        }
+                    }
+                }
+                if(errorText != null) {
+                    System.out.println(errorText);
+                }
+//                System.out.print("-> ");
+                input = in.nextLine();
+            }
         }
         catch (Exception exception) {
             System.err.println("Client XML-RPC: " + exception);

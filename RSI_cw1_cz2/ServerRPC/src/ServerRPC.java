@@ -15,7 +15,9 @@ public class ServerRPC {
         return """
                 Available methods for server:
                 1. max int int        - returns maximum value
-                1. charAt String int  - returns char at index of given text
+                2. charAt String int  - returns char at index of given text
+                
+                To run async method add flag: -a
                 """;
     }
 
