@@ -21,6 +21,15 @@ public class ClientRPC {
             localhost,
             PORT
     );
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
 
     private final XmlRpcClient server;
     private final AC cb;
@@ -36,18 +45,18 @@ public class ClientRPC {
 
     public static void printResult(String methodName, Object result, Object ... methodArgs) {
         var args = Arrays.stream(methodArgs).map(Object::toString).collect(Collectors.joining(", "));
-        System.out.println("SYNC result for " + methodName + "(" + args + "):\n\t" + result);
+        System.out.println(ANSI_CYAN + "SYNC  result" + ANSI_RESET + " for " + methodName + "(" + args + "): " + ANSI_PURPLE + result + ANSI_RESET);
     }
 
     public void printAsyncRun(String methodName, Object ... methodArgs) {
         var args = Arrays.stream(methodArgs).map(Object::toString).collect(Collectors.joining(", "));
-        System.out.println("ASYNC method " + methodName + "(" + args + ") is running.");
+        System.out.println(ANSI_PURPLE + "ASYNC method " + ANSI_RESET + methodName + "(" + args + ") is running.");
     }
 
     public void show() throws IOException, XmlRpcException {
         String currentMethodName = new Object() {}.getClass().getEnclosingMethod().getName();
         String result = (String) execute(currentMethodName);
-        System.out.println(result);
+        System.out.print(result);
     }
 
     public Object execute(String methodName, Object ... args) throws IOException, XmlRpcException {
@@ -128,25 +137,40 @@ public class ClientRPC {
                     }
             }
         }
-        if (errorText != null) { System.out.println(errorText); }
+        if (errorText != null) { System.out.println(ANSI_YELLOW + errorText + ANSI_RESET); }
     }
 
     public static void main(String[] args) {
         try {
             ClientRPC clientRPC = new ClientRPC();
             clientRPC.show();
-            System.out.print("Write command:\n-> ");
+            var endStr = "end";
+            System.out.printf(
+                    """
+                    Connected to server
+                    \tNAME: %s
+                    \tURL:  %s
+                    To end connection write: %s
+                    ----------------------------------------------------------------------------------------------------------------------------------
+                    Write command:
+                    -> 
+                    """,
+                    URL,
+                    SERVER_NAME,
+                    endStr
+            );
 
             Scanner in = new Scanner(System.in);
             String input = in.nextLine();
 
-            while (!Objects.equals(input, "end")) {
+            while (!Objects.equals(input, endStr)) {
                 clientRPC.runCommand(input);
                 input = in.nextLine();
             }
         }
         catch (Exception exception) {
-            System.err.println("Client XML-RPC: " + exception);
+            System.err.printf("Server XML-RPC (NAME: %s; PORT: %s): %s\n", SERVER_NAME, PORT, exception);
         }
+        System.out.println("Connection was terminated.");
     }
 }

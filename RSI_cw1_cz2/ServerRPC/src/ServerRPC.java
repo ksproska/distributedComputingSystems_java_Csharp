@@ -13,8 +13,9 @@ public class ServerRPC {
      * procedurach – wyświetla ich listę z opisem (nazwa procedury, parametry, krótki opis)
      */
     public String show() {
-        return """
-                Available methods for server:
+        return String.format("""
+                ----------------------------------------------------------------------------------------------------------------------------------
+                %s (port: %s) - available methods:
                 1. max int int                          - returns maximum value
                 2. charAt String int                    - returns char at index of given text
                 3. setTimer int int                     - returns array of int for seconds selected with the brake (val1) repeated (val2)
@@ -22,7 +23,10 @@ public class ServerRPC {
                 5. myPrimes int int                     - number of primes in (min, max), and max prime value in given range
                 
                 To run async method add flag: -a
-                """;
+                ----------------------------------------------------------------------------------------------------------------------------------
+                """,
+                SERVER_NAME,
+                PORT);
     }
 
     public Integer max(int val1, int val2) {
@@ -82,13 +86,14 @@ public class ServerRPC {
             startServer();
             System.out.printf("""
                     Server has started successfully.
+                    NAME:      %s
                     PORT:      %s
                     to finish: ctrl+c
                     ________________________________
-                    """, PORT);
+                    """, SERVER_NAME, PORT);
         }
         catch (Exception exception) {
-            System.err.println("Server XML-RPC: " + exception);
+            System.err.printf("Server XML-RPC (NAME: %s; PORT: %s): %s\n", SERVER_NAME, PORT, exception);
         }
     }
 }
