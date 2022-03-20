@@ -36,7 +36,7 @@ public class ServerRPC {
     public String charAt(String text, int charInx) {
         if(text.length() <= charInx) {
             // TODO: method cannot return null values
-            return null;
+            return "";
         }
         return text.charAt(charInx) + "";
     }
@@ -85,7 +85,7 @@ public class ServerRPC {
         int counter = 0;
         int lastPrime = 0;
         if(min > max) {
-            return null;
+            return new Integer[0];
         }
         for(int i = min; i <= max; i++){
             if(isPrime(i)){
