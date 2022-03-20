@@ -2,40 +2,39 @@ import org.apache.xmlrpc.XmlRpcClient;
 import org.apache.xmlrpc.XmlRpcException;
 
 import java.io.IOException;
-import java.lang.reflect.Method;
 import java.net.MalformedURLException;
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.Scanner;
-import java.util.Vector;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+
 
 public class ClientRPC {
     private static final String SERVER_NAME = "ServerRPC";
     // TODO: 10000 -> 10000 + numer komputera w laboratorium
-    private static final int PORT = 10000;
-    private static final String hamachiIP = "", localhost = "localhost";
-    private static final String URL = String.format(
-            "http://%s:%d",
-//            hamachiIP,
-            localhost,
-            PORT
-    );
+    public static String URL(String host, int port) {
+        return String.format("http://%s:%d", host, port);
+    }
     public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_BLACK = "\u001B[30m";
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_CYAN = "\u001B[36m";
-    public static final String ANSI_WHITE = "\u001B[37m";
+//    public static final String ANSI_BLACK = "\u001B[30m";
+//    public static final String ANSI_RED = "\u001B[31m";
+//    public static final String ANSI_GREEN = "\u001B[32m";
+//    public static final String ANSI_BLUE = "\u001B[34m";
+//    public static final String ANSI_WHITE = "\u001B[37m";
 
     private final XmlRpcClient server;
     private final AC cb;
 
-    public ClientRPC() throws MalformedURLException {
-        server = new XmlRpcClient(URL);
+    public ClientRPC(String host, int port) throws MalformedURLException {
+        server = new XmlRpcClient(URL(host, port));
+        cb = new AC();
+    }
+
+    public ClientRPC(String url) throws MalformedURLException {
+        server = new XmlRpcClient(url);
         cb = new AC();
     }
 
@@ -108,7 +107,7 @@ public class ClientRPC {
                     else {
                         try {
                             var paramsToPass = new Object[paramsClasses.length];
-                            // TODO: the only acceptable types for now: Integer, int, String
+                            // TODO: the only acceptable types for now: Integer, int, String, Double, double
                             for (int i = 0; i < paramsClasses.length; i++) {
                                 if (paramsClasses[i] == int.class || paramsClasses[i] == Integer.class) {
                                     paramsToPass[i] = Integer.parseInt(inputElems[i + 1]);
@@ -140,9 +139,85 @@ public class ClientRPC {
         if (errorText != null) { System.out.println(ANSI_YELLOW + errorText + ANSI_RESET); }
     }
 
+    private static final String IPV4_PATTERN = "^(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])(\\.(?!$)|$)){4}$";
+    private static final Pattern pattern = Pattern.compile(IPV4_PATTERN);
+
+    public static boolean isValid(final String email) {
+        Matcher matcher = pattern.matcher(email);
+        return matcher.matches();
+    }
+
+    public static String scannerURL(String host, int port) {
+        System.out.printf(
+                """
+                Do you wanna continue with default (%s)?
+                \tyes        -> ENTER
+                \tchoose IP  -> ip
+                \tchoose DNS -> dns
+                ->\s""",
+                URL(host, port)
+        );
+        Scanner in = new Scanner(System.in);
+        var continueStr = in.nextLine();
+        var options = new ArrayList<String>();
+        var defaultOption = "";
+        var ipOption = "ip";
+        var dnsOption = "dns";
+
+        options.add(defaultOption);
+        options.add(ipOption);
+        options.add(dnsOption);
+
+        while (!options.contains(continueStr)) {
+            System.out.print(ANSI_YELLOW + "Incorrect input." + ANSI_RESET + "\n-> ");
+            continueStr = in.nextLine();
+        }
+        if (Objects.equals(continueStr, dnsOption)) {
+            System.out.print("Enter dns: ");
+            host = in.nextLine();
+            while (host.equals("")) {
+                System.out.print(ANSI_YELLOW + "Incorrect input." + ANSI_RESET + "\nEnter dns: ");
+                host = in.nextLine();
+            }
+        }
+        else if (Objects.equals(continueStr, ipOption)) {
+            System.out.print("Enter ip: ");
+            host = in.nextLine();
+            while (!isValid(host)) {
+                System.out.print(ANSI_YELLOW + "Incorrect input." + ANSI_RESET + "\nEnter ip: ");
+                host = in.nextLine();
+            }
+        }
+        if(!continueStr.equals(defaultOption)) {
+            System.out.print("Enter port number: ");
+            try {
+                port = Integer.parseInt(in.nextLine());
+            }
+            catch (NumberFormatException e) {
+                port = -1;
+            }
+            while (port < 0) {
+                System.out.print(ANSI_YELLOW + "Incorrect input." + ANSI_RESET + "\nEnter port number: ");
+                try {
+                    port = Integer.parseInt(in.nextLine());
+                }
+                catch (NumberFormatException ignored) {}
+            }
+        }
+        if(continueStr.equals(defaultOption)) {
+            System.out.println("Default settings chosen.");
+        }
+//        in.close();
+        return URL(host, port);
+    }
+
     public static void main(String[] args) {
+        var host = "localhost";
+        var port = 10000;
+        var selectedURL = scannerURL(host, port);
+        Scanner in = new Scanner(System.in);
         try {
-            ClientRPC clientRPC = new ClientRPC();
+            ClientRPC clientRPC = new ClientRPC(selectedURL);
             clientRPC.show();
             var endStr = "end";
             System.out.printf(
@@ -153,14 +228,12 @@ public class ClientRPC {
                     To end connection write: %s
                     ----------------------------------------------------------------------------------------------------------------------------------
                     Write command:
-                    -> 
-                    """,
-                    URL,
+                    ->\s""",
+                    URL(host, port),
                     SERVER_NAME,
                     endStr
             );
 
-            Scanner in = new Scanner(System.in);
             String input = in.nextLine();
 
             while (!Objects.equals(input, endStr)) {
@@ -169,7 +242,7 @@ public class ClientRPC {
             }
         }
         catch (Exception exception) {
-            System.err.printf("Server XML-RPC (NAME: %s; PORT: %s): %s\n", SERVER_NAME, PORT, exception);
+            System.err.printf("Server XML-RPC (NAME: %s; PORT: %s): %s\n", SERVER_NAME, port, exception);
         }
         System.out.println("Connection was terminated.");
     }
