@@ -84,7 +84,7 @@ public class ServerRPC {
     public Integer[] myPrimes(int min, int max) {
         int counter = 0;
         int lastPrime = 0;
-        if(min > max) {
+        if(min > max || min < 0 || max < 0) {
             return new Integer[0];
         }
         for(int i = min; i <= max; i++){
@@ -97,10 +97,19 @@ public class ServerRPC {
     }
 
     public static boolean isPrime(int number) {
-        for(int i = 2; i <= number/i; ++i){
-            if(number % i == 0) {
+        // 0, 1 i liczby ujemne nie sa liczbami pierwszymi
+        if (number <= 1)
+            return false;
+        // 2 - jedyna parzysta liczba pierwsza - wyjatkowy przypadek
+        else if (number == 2)
+            return true;
+        // Jesli number jest wielokrotnoscia 2, nie jest pierwsza
+        else if (number % 2 == 0)
+            return false;
+        for (int i = 3; i <= Math.sqrt(number); i += 2)
+        {
+            if (number % i == 0)
                 return false;
-            }
         }
         return true;
     }
