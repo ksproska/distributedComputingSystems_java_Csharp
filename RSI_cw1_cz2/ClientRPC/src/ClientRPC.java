@@ -83,7 +83,7 @@ public class ClientRPC {
         public String charAt(String text, int charInx) { return null; }
         public Integer[] setTimer(int everyXSec, int repeat) { return null; }
         public void show() {}
-        public Double[][] distance(double latitude1, double longitude1, double latitude2, double longitude2) { return null; }
+        public Double distance(double latitude1, double longitude1, double latitude2, double longitude2) { return null; }
         public Integer[] myPrimes(int min, int max) { return null; }
     }
 

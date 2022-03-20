@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="672a1b2e-f519-48d0-9590-2dd32a5480dd" name="Changes" comment="email exercise framework added 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClientRPC/ClientRPC$ExecutableMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ClientRPC/ClientRPC$ExecutableMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClientRPC/ClientRPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ClientRPC/ClientRPC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ClientRPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientRPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerRPC/out/production/ServerRPC/ServerRPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerRPC/out/production/ServerRPC/ServerRPC.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ServerRPC/src/ServerRPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerRPC/src/ServerRPC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +71,8 @@
       <workItem from="1647677369787" duration="62000" />
       <workItem from="1647677565157" duration="18443000" />
       <workItem from="1647731732407" duration="3318000" />
-      <workItem from="1647757738209" duration="3251000" />
+      <workItem from="1647757738209" duration="3610000" />
+      <workItem from="1647771661911" duration="969000" />
     </task>
     <task id="LOCAL-00001" summary="new methods added (with multiple, diverse parameters)">
       <created>1647683819441</created>

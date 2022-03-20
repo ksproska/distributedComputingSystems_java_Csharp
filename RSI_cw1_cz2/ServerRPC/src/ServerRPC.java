@@ -57,16 +57,43 @@ public class ServerRPC {
         return arrayInt;
     }
 
-    public Double[][] distance(double latitude1, double longitude1, double latitude2, double longitude2) {
-        // TODO: zwraca odległość między dwoma punktami na powierzchni Ziemi.
-        //  Parametry tej metody to współrzędne geograficzne obu punktów
-        return new Double[0][];
+    private static Double toRad(Double value) {
+        return value * Math.PI / 180;
     }
+
+    /**
+     * zwraca odległość między dwoma punktami na powierzchni Ziemi.
+     * Parametry tej metody to współrzędne geograficzne obu punktów
+     */
+    public Double distance(double latitude1, double longitude1, double latitude2, double longitude2) {
+        final int R = 6371;
+        double latDistance = toRad(latitude2-latitude1);
+        double lonDistance = toRad(longitude2-longitude1);
+        double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2) +
+                Math.cos(toRad(latitude1)) * Math.cos(toRad(latitude2)) *
+                        Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2);
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        return R * c;
+    }
+
+    /**
+     * zwraca ilość liczb pierwszych w podanym przedziale [min, max]
+     * oraz największą liczbę pierwszą mniejszą/równą max.
+     * Sprawdzić/przetestować dla dużych wartości, np. min= 100000000 max=11000000
+     */
     public Integer[] myPrimes(int min, int max) {
-        // TODO: zwraca ilość liczb pierwszych w podanym przedziale [min, max]
-        //  oraz największą liczbę pierwszą mniejszą/równą max.
-        //  Sprawdzić/przetestować dla dużych wartości, np. min= 100000000 max=11000000
-        return new Integer[0];
+        int counter = 0;
+        int lastPrime = 0;
+        if(min > max) {
+            return null;
+        }
+        for(int i = min; i <= max; i++){
+            if(isPrime(i)){
+                counter++;
+                lastPrime = i;
+            }
+        }
+        return new Integer[] {counter, lastPrime};
     }
 
     //------------------------------------------------------------------------------------------------------------------
