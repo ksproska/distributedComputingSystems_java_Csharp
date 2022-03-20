@@ -8,6 +8,7 @@ public class AC implements AsyncCallback {
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
     @Override
     public void handleResult(Object o, URL url, String s) {
         System.out.printf("""
@@ -23,11 +24,11 @@ public class AC implements AsyncCallback {
 
     @Override
     public void handleError(Exception e, URL url, String s) {
-        System.out.printf("""
+        System.out.printf(ANSI_YELLOW + """
                 Exception:
                 \tException error = %s;
                 \tMethod method   = %s;
                 \tString URL      = %s;
-                """, e, url, s);
+                """ + ANSI_RESET, e, url, s);
     }
 }
