@@ -1,6 +1,7 @@
 import org.apache.xmlrpc.WebServer;
 
 import java.time.LocalDateTime;
+import java.util.Arrays;
 
 public class ServerRPC {
     private static final String SERVER_NAME = "ServerRPC";
@@ -14,9 +15,11 @@ public class ServerRPC {
     public String show() {
         return """
                 Available methods for server:
-                1. max int int        - returns maximum value
-                2. charAt String int  - returns char at index of given text
-                3. setTimer int int   - returns array of int for seconds selected with the brake (val1) repeated (val2)
+                1. max int int                          - returns maximum value
+                2. charAt String int                    - returns char at index of given text
+                3. setTimer int int                     - returns array of int for seconds selected with the brake (val1) repeated (val2)
+                4. distance double double double double - distance from place1: latitude1, longitude1, to place2: latitude2, longitude2
+                5. myPrimes int int                     - number of primes in (min, max), and max prime value in given range
                 
                 To run async method add flag: -a
                 """;
@@ -50,16 +53,16 @@ public class ServerRPC {
         return arrayInt;
     }
 
-    public Integer distance() {
+    public Double[][] distance(double latitude1, double longitude1, double latitude2, double longitude2) {
         // TODO: zwraca odległość między dwoma punktami na powierzchni Ziemi.
         //  Parametry tej metody to współrzędne geograficzne obu punktów
-        return -1;
+        return new Double[0][];
     }
-    public Integer myPrimes() {
+    public Integer[] myPrimes(int min, int max) {
         // TODO: zwraca ilość liczb pierwszych w podanym przedziale [min, max]
         //  oraz największą liczbę pierwszą mniejszą/równą max.
         //  Sprawdzić/przetestować dla dużych wartości, np. min= 100000000 max=11000000
-        return -1;
+        return new Integer[0];
     }
 
     //------------------------------------------------------------------------------------------------------------------

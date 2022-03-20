@@ -74,14 +74,8 @@ public class ClientRPC {
         public String charAt(String text, int charInx) { return null; }
         public Integer[] setTimer(int everyXSec, int repeat) { return null; }
         public void show() {}
-        public Integer distance() {
-            // TODO: correct parameter types and return type
-            return null;
-        }
-        public Integer myPrimes() {
-            // TODO: correct parameter types and return type
-            return null;
-        }
+        public Double[][] distance(double latitude1, double longitude1, double latitude2, double longitude2) { return null; }
+        public Integer[] myPrimes(int min, int max) { return null; }
     }
 
     public void runCommand(String input) throws IOException, XmlRpcException {
@@ -100,7 +94,7 @@ public class ClientRPC {
                 var paramsClasses = method.getParameterTypes();
                     if (paramsClasses.length != inputElems.length - 1) {
                         errorText = "Expected number of parameters for method " + methodName.toUpperCase()
-                                + ": " + paramsClasses.length;
+                                + ": " + paramsClasses.length + "; of types: " + Arrays.toString(paramsClasses);
                     }
                     else {
                         try {
@@ -109,7 +103,11 @@ public class ClientRPC {
                             for (int i = 0; i < paramsClasses.length; i++) {
                                 if (paramsClasses[i] == int.class || paramsClasses[i] == Integer.class) {
                                     paramsToPass[i] = Integer.parseInt(inputElems[i + 1]);
-                                } else {
+                                }
+                                else if (paramsClasses[i] == double.class || paramsClasses[i] == Double.class) {
+                                    paramsToPass[i] = Double.parseDouble(inputElems[i + 1]);
+                                }
+                                else {
                                     paramsToPass[i] = inputElems[i + 1];
                                 }
                             }

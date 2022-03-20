@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="672a1b2e-f519-48d0-9590-2dd32a5480dd" name="Changes" comment="housekeeping">
+    <list default="true" id="672a1b2e-f519-48d0-9590-2dd32a5480dd" name="Changes" comment="email exercise framework added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ClientRPC/ClientRPC$ExecutableMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ClientRPC/ClientRPC$ExecutableMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ClientRPC/ClientRPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ClientRPC/ClientRPC.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ClientRPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientRPC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ServerRPC/src/ServerRPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerRPC/src/ServerRPC.java" afterDir="false" />
     </list>
@@ -70,7 +72,7 @@
       <updated>1647677368662</updated>
       <workItem from="1647677369787" duration="62000" />
       <workItem from="1647677565157" duration="18443000" />
-      <workItem from="1647731732407" duration="1273000" />
+      <workItem from="1647731732407" duration="2970000" />
     </task>
     <task id="LOCAL-00001" summary="new methods added (with multiple, diverse parameters)">
       <created>1647683819441</created>
@@ -100,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647697805157</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="email exercise framework added">
+      <created>1647733198282</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647733198282</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +130,7 @@
     <MESSAGE value="new methods added (with multiple, diverse parameters)" />
     <MESSAGE value="console app added" />
     <MESSAGE value="housekeeping" />
-    <option name="LAST_COMMIT_MESSAGE" value="housekeeping" />
+    <MESSAGE value="email exercise framework added" />
+    <option name="LAST_COMMIT_MESSAGE" value="email exercise framework added" />
   </component>
 </project>
