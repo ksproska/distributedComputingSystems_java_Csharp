@@ -14,7 +14,6 @@ F:\rozproszone_systemy\RSI_cw2_cz1\GrpcServer\GrpcServer\bin\Debug\net5.0\Grpc.C
 F:\rozproszone_systemy\RSI_cw2_cz1\GrpcServer\GrpcServer\bin\Debug\net5.0\Grpc.Net.Client.dll
 F:\rozproszone_systemy\RSI_cw2_cz1\GrpcServer\GrpcServer\bin\Debug\net5.0\Grpc.Net.ClientFactory.dll
 F:\rozproszone_systemy\RSI_cw2_cz1\GrpcServer\GrpcServer\bin\Debug\net5.0\Grpc.Net.Common.dll
-F:\rozproszone_systemy\RSI_cw2_cz1\GrpcServer\GrpcServer\obj\Debug\net5.0\GrpcServer.csproj.AssemblyReference.cache
 F:\rozproszone_systemy\RSI_cw2_cz1\GrpcServer\GrpcServer\obj\Debug\net5.0\GrpcServer.GeneratedMSBuildEditorConfig.editorconfig
 F:\rozproszone_systemy\RSI_cw2_cz1\GrpcServer\GrpcServer\obj\Debug\net5.0\GrpcServer.AssemblyInfoInputs.cache
 F:\rozproszone_systemy\RSI_cw2_cz1\GrpcServer\GrpcServer\obj\Debug\net5.0\GrpcServer.AssemblyInfo.cs

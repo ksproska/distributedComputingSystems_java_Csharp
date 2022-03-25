@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServer";
+
+package mygrpc;
+
+// Service definition. 
+service GrpcService { 
+  rpc GrpcProc (GrpcRequest) returns (GrpcResponse); 
+}
+
+// The request message 
+message GrpcRequest { 
+  string name = 1; 
+  int32 age = 2; 
+}
+
+// The response message 
+message GrpcResponse { 
+  string message = 1; 
+  int32 days = 2; 
+}
