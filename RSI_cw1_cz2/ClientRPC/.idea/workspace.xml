@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="672a1b2e-f519-48d0-9590-2dd32a5480dd" name="Changes" comment="email exercise framework added 2">
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw1/Cw1-XMLRPC-1b-unlocked.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw1/Cw1-XMLRPC-1b-unlocked.pdf" afterDir="false" />
+    <list default="true" id="672a1b2e-f519-48d0-9590-2dd32a5480dd" name="Changes" comment="choosing dns/ip added">
+      <change afterPath="$PROJECT_DIR$/../.idea/RSI_cw1_cz2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_01_2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_01_2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/xmlrpc_1_2_b1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClientRPC/ClientRPC$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ClientRPC/ClientRPC$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClientRPC/ClientRPC$ExecutableMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ClientRPC/ClientRPC$ExecutableMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ClientRPC/ClientRPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ClientRPC/ClientRPC.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientRPC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientRPC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ServerRPC/out/production/ServerRPC/ServerRPC.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerRPC/out/production/ServerRPC/ServerRPC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerRPC/ServerRPC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerRPC/ServerRPC.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../RSI_00" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xmlrpc-1.2-b1.jar" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -49,6 +51,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager">
     <configuration name="ClientRPC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -76,7 +79,8 @@
       <workItem from="1647677565157" duration="18443000" />
       <workItem from="1647731732407" duration="3318000" />
       <workItem from="1647757738209" duration="3610000" />
-      <workItem from="1647771661911" duration="12200000" />
+      <workItem from="1647771661911" duration="12307000" />
+      <workItem from="1648195201629" duration="96000" />
     </task>
     <task id="LOCAL-00001" summary="new methods added (with multiple, diverse parameters)">
       <created>1647683819441</created>
@@ -120,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647735042147</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="choosing dns/ip added">
+      <created>1647789277624</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1647789277624</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,6 +154,11 @@
     <MESSAGE value="housekeeping" />
     <MESSAGE value="email exercise framework added" />
     <MESSAGE value="email exercise framework added 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="email exercise framework added 2" />
+    <MESSAGE value="choosing dns/ip added" />
+    <option name="LAST_COMMIT_MESSAGE" value="choosing dns/ip added" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
