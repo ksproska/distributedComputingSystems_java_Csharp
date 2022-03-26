@@ -1,4 +1,4 @@
-public class ClientRMI {
+public class MyClient {
     public static void main(String[] args) {
         double wynik;
         CalcObject zObiekt;
