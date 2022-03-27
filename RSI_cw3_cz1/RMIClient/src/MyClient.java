@@ -61,7 +61,9 @@ public class MyClient {
         System.out.println("Wynik = "+ wynik);
 
         try {
+            // obiekt-zadania - parametr dla metody zdalnej
             inObj = new InputType();
+            //  składowe obiektu-zadania
             inObj.x1 = 10.5;
             inObj.x2 = 3.2;
             inObj.operation="add"; //lub "sub"

@@ -22,7 +22,7 @@ public class MyServer {
             System.setSecurityManager(new SecurityManager());
         }
 
-        // realizacja programowa, jesli rejestr i serwer odpalane sa na tym samym komputerze
+        // kod utworzenia rejestru dla serwera - realizacja programowa, jesli rejestr i serwer odpalane sa na tym samym komputerze
         // TODO: skomentowac, jesli reczna konfiguracja i uruchomienie
         try {
             Registry reg = LocateRegistry.createRegistry(1099);
