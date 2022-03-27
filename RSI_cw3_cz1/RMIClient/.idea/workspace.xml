@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="302ababa-7e4f-464c-9241-ef387cd7f9c8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw2_cz1/GrpcServer/.vs/GrpcServer/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw2_cz1/GrpcServer/.vs/GrpcServer/v16/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cw3-JavaRMI-1b-unlocked.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Cw3-JavaRMI-1b-unlocked.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CalcObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalcObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RMIServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RMIServer/src/CalcObjImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIServer/src/CalcObjImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RMIServer/src/CalcObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIServer/src/CalcObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RMIServer/src/MyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIServer/src/MyServer.java" afterDir="false" />
+    <list default="true" id="302ababa-7e4f-464c-9241-ef387cd7f9c8" name="Changes" comment="client comments">
+      <change beforePath="$PROJECT_DIR$/src/InputType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InputType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RMIServer/src/InputType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIServer/src/InputType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +43,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648292022727</updated>
-      <workItem from="1648373715082" duration="1053000" />
+      <workItem from="1648373715082" duration="1393000" />
     </task>
+    <task id="LOCAL-00001" summary="client comments">
+      <created>1648375483691</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1648375483691</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="client comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="client comments" />
   </component>
 </project>

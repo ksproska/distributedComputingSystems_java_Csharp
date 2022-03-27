@@ -1,5 +1,9 @@
 import java.io.Serializable;
 
+/**
+ * typ parametru zdalnie wywoływanej metody klasy obiektu zdalnego (klasy CalcObject2).
+ * Klasa parametru zawiera zadanie/operację do obliczeń
+ */
 public class InputType implements Serializable {
     private static final long serialVersionUID = 101L;
     String operation;
