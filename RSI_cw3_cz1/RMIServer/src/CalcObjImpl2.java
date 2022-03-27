@@ -6,7 +6,7 @@ public class CalcObjImpl2 extends UnicastRemoteObject implements CalcObject2 {
         super();
     }
 
-    public ResultType calculate(InputType inParam) throws RemoteException{
+    public ResultType calculate(InputType inParam) throws RemoteException {
         double zm1, zm2;
         ResultType wynik = new ResultType();
 

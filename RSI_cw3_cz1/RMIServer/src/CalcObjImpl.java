@@ -11,7 +11,7 @@ public class CalcObjImpl extends UnicastRemoteObject implements CalcObject {
         super();
     }
 
-    public double calculate(double a, double b) throws RemoteException{
+    public double calculate(double a, double b) throws RemoteException {
         double wynik = a + b;
         return wynik;
     }
