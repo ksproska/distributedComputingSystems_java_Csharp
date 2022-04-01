@@ -7,8 +7,4 @@ public abstract class ARemoteObject extends UnicastRemoteObject implements Remot
     public ARemoteObject()  throws RemoteException {
         super();
     }
-
-//    public static <T extends ARemoteObject> T invoke() throws RemoteException {
-//        throw new IllegalStateException("Invoke not implemented");
-//    }
 }

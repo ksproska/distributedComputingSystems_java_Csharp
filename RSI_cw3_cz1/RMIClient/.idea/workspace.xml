@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="302ababa-7e4f-464c-9241-ef387cd7f9c8" name="Changes" comment="client comments">
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/out/production/ServerWorker/srv.policy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ARemoteObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/AddObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IAddObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IServerWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ServerWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/srv.policy" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/srv.policy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cw3-JavaRMI-1b-unlocked.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Cw3-JavaRMI-1b-unlocked.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/IAddObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/IClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RMIServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ARemoteObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ARemoteObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +63,7 @@
       <updated>1648292022727</updated>
       <workItem from="1648373715082" duration="1393000" />
       <workItem from="1648404483194" duration="1831000" />
-      <workItem from="1648792775611" duration="1451000" />
+      <workItem from="1648792775611" duration="4119000" />
     </task>
     <task id="LOCAL-00001" summary="client comments">
       <created>1648375483691</created>
