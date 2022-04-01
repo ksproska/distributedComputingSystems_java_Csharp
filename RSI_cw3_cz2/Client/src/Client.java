@@ -1,10 +1,10 @@
 import remoteObjects.IAddObject;
 import remoteObjects.IRunOperation;
 import remoteObjects.RunOperationInputType;
-
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.Arrays;
+
 
 public class Client implements IClient {
     public Client() {
@@ -31,7 +31,11 @@ public class Client implements IClient {
                 System.out.println("Server is NOT RUNNING!");
                 System.exit(-1);
             }
-            System.out.println("Nie można pobrać referencji do " + serviceAddress);
+            System.out.printf(
+                    """
+                    ERROR FOR:\u001B[32m %s\u001B[0m =>\u001B[34m %s \u001B[0m
+                    """, objectInterface.getName(), serviceAddress
+            );
             e.printStackTrace();
             System.exit(-1);
         }

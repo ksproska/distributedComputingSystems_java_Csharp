@@ -1,7 +1,6 @@
 package remoteObjects;
-
-
 import java.io.Serializable;
+
 
 public class RunOperationResultType implements Serializable {
     private static final long serialVersionUID = 101L;
