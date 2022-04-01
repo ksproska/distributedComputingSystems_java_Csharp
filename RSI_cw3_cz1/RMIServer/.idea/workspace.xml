@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f56a05c7-16c6-433e-b027-57100a6bb94b" name="Changes" comment="policy added">
-      <change afterPath="$PROJECT_DIR$/src/srv.policy" afterDir="false" />
+    <list default="true" id="f56a05c7-16c6-433e-b027-57100a6bb94b" name="Changes" comment="comments">
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/out/production/ServerWorker/srv.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ARemoteObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/AddObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IAddObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IServerWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ServerWorker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/srv.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/srv.policy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cw3-JavaRMI-1b-unlocked.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../Cw3-JavaRMI-1b-unlocked.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RMIClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIClient/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RMIClient/src/MyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIClient/src/MyClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../RMIClient/src/ResultType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIClient/src/ResultType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CalcObjImpl2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CalcObjImpl2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ResultType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ResultType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648292050757</updated>
       <workItem from="1648373764877" duration="1965000" />
+      <workItem from="1648791892449" duration="4873000" />
     </task>
     <task id="LOCAL-00001" summary="exercise pdf">
       <created>1648373946784</created>
@@ -78,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648404444764</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="comments">
+      <created>1648405535985</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1648405535985</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +112,7 @@
     <MESSAGE value="exercise pdf" />
     <MESSAGE value="server comments" />
     <MESSAGE value="policy added" />
-    <option name="LAST_COMMIT_MESSAGE" value="policy added" />
+    <MESSAGE value="comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments" />
   </component>
 </project>
