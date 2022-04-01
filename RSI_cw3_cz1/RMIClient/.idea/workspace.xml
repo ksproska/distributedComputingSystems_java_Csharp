@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="302ababa-7e4f-464c-9241-ef387cd7f9c8" name="Changes" comment="client comments">
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/IRunOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IRunOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/RunOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RMIServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIServer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/AddObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/AddObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IServerWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IServerWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/OperationInputType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/OperationInputType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/OperationResultType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/OperationResultType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ServerWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ServerWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/ARemoteObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/ARemoteObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/AddObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/AddObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/IAddObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/IAddObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/IRunOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/IRunOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/RunOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/RunOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/RunOperationInputType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/RunOperationInputType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/RunOperationResultType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/RunOperationResultType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +70,7 @@
       <updated>1648292022727</updated>
       <workItem from="1648373715082" duration="1393000" />
       <workItem from="1648404483194" duration="1831000" />
-      <workItem from="1648792775611" duration="4119000" />
+      <workItem from="1648792775611" duration="4720000" />
     </task>
     <task id="LOCAL-00001" summary="client comments">
       <created>1648375483691</created>

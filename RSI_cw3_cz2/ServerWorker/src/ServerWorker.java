@@ -1,11 +1,11 @@
 import remoteObjects.ARemoteObject;
 import remoteObjects.AddObject;
 import remoteObjects.RunOperation;
-
 import java.net.MalformedURLException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
+
 
 public class ServerWorker implements IServerWorker {
     public ServerWorker() {
@@ -40,7 +40,7 @@ public class ServerWorker implements IServerWorker {
             java.rmi.Naming.rebind(serviceAddress, remoteObject);
             System.out.printf(
                     """
-                    \s\tSuccessful registration: %s => %s
+                    \s\tSuccessful registration:\u001B[32m %s\u001B[0m\t=>\u001B[34m %s \u001B[0m
                     """, remoteObject.getClass().getName(), serviceAddress
             );
         } catch (RemoteException | MalformedURLException | java.security.AccessControlException e) {

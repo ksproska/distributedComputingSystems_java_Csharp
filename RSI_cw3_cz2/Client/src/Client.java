@@ -1,5 +1,6 @@
 import remoteObjects.IAddObject;
 import remoteObjects.IRunOperation;
+import remoteObjects.RunOperationInputType;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
@@ -47,9 +48,8 @@ public class Client implements IClient {
 //    }
 
     static private <T> void displayResultPattern(Object result, Class objectClass, Object ... params) {
-        System.out.println("Result for " + objectClass.getName() + "" +
-                Arrays.toString(params).replace('[', '(').replace(']', ')') +
-                " => " + result);
+        System.out.printf("Result for \u001B[32m%s\u001B[0m%s => %s\n",
+                objectClass.getName(), Arrays.toString(params).replace('[', '(').replace(']', ')'), result);
     }
 
     public static void displayResult(IAddObject object, double var1, double var2) throws RemoteException {
@@ -57,9 +57,9 @@ public class Client implements IClient {
         displayResultPattern(result, IAddObject.class, var1, var2);
     }
 
-    public static void displayResult(IRunOperation object, String str1, double var1, double var2) throws RemoteException {
-        var result = object.calculate(str1, var1, var2);
-        displayResultPattern(result, IRunOperation.class, str1, var1, var2);
+    public static void displayResult(IRunOperation object, RunOperationInputType runOperationInputType) throws RemoteException {
+        var result = object.calculate(runOperationInputType);
+        displayResultPattern(result, IRunOperation.class, runOperationInputType);
     }
 
 
@@ -69,8 +69,8 @@ public class Client implements IClient {
         IRunOperation runOperationObject = client.getRemoteObject("//localhost/runOperation", IRunOperation.class);
         displayResult(addObject, 2, 3);
         displayResult(addObject, 4, 4);
-        displayResult(runOperationObject, "add", 3, 4);
-        displayResult(runOperationObject, "mul", 3, 4);
+        displayResult(runOperationObject, new RunOperationInputType("add", 3, 4));
+        displayResult(runOperationObject, new RunOperationInputType("add", 3, 4));
 
 //        client.displayResultObject(addObject, new Object[] {3.0, 4.0});
 //        var met = client.getCalculateMethod(remoteObjects.IAddObject.class, new Class[] {double.class, double.class});
