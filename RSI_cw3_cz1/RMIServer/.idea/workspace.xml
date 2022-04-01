@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f56a05c7-16c6-433e-b027-57100a6bb94b" name="Changes" comment="comments">
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/IAddObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/IClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/IRunOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IRunOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/RunOperation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RMIClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIClient/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ARemoteObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ARemoteObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/AddObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/AddObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IServerWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IServerWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/OperationInputType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/OperationInputType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/OperationResultType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/OperationResultType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ServerWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ServerWorker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648292050757</updated>
       <workItem from="1648373764877" duration="1965000" />
-      <workItem from="1648791892449" duration="6678000" />
+      <workItem from="1648791892449" duration="7408000" />
     </task>
     <task id="LOCAL-00001" summary="exercise pdf">
       <created>1648373946784</created>

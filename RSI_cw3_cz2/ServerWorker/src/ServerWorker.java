@@ -1,3 +1,7 @@
+import remoteObjects.ARemoteObject;
+import remoteObjects.AddObject;
+import remoteObjects.RunOperation;
+
 import java.net.MalformedURLException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -22,11 +26,6 @@ public class ServerWorker implements IServerWorker {
             }
             e1.printStackTrace();
         }
-    }
-
-    @Override
-    public double calculate(IAddObject remoteObject, double val1, double val2) throws RemoteException {
-        return 0;
     }
 
     @Override
@@ -57,6 +56,7 @@ public class ServerWorker implements IServerWorker {
         var serverWorker = new ServerWorker();
         System.out.println("\sServer started running...");
         serverWorker.registerObject("//localhost/add", AddObject.class);
+        serverWorker.registerObject("//localhost/runOperation", RunOperation.class);
         System.out.println("\sAll set and running.\n");
     }
 }

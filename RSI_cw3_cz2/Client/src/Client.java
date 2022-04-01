@@ -1,7 +1,6 @@
-import com.sun.jdi.InterfaceType;
+import remoteObjects.IAddObject;
+import remoteObjects.IRunOperation;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.Arrays;
@@ -47,24 +46,33 @@ public class Client implements IClient {
 //        }
 //    }
 
-    private <T> void displayResult(Object result, Class objectClass, Object ... params) {
+    static private <T> void displayResultPattern(Object result, Class objectClass, Object ... params) {
         System.out.println("Result for " + objectClass.getName() + "" +
                 Arrays.toString(params).replace('[', '(').replace(']', ')') +
                 " => " + result);
     }
 
-    void displayResultAddObject(IAddObject addObject, double var1, double var2) throws RemoteException {
-        var obj1Result = addObject.calculate(var1, var2);
-        displayResult(obj1Result, IAddObject.class, var1, var2);
+    public static void displayResult(IAddObject object, double var1, double var2) throws RemoteException {
+        var result = object.calculate(var1, var2);
+        displayResultPattern(result, IAddObject.class, var1, var2);
     }
+
+    public static void displayResult(IRunOperation object, String str1, double var1, double var2) throws RemoteException {
+        var result = object.calculate(str1, var1, var2);
+        displayResultPattern(result, IRunOperation.class, str1, var1, var2);
+    }
+
 
     public static void main(String[] args) throws RemoteException {
         var client = new Client();
-        IAddObject obj1 = client.getRemoteObject("//localhost/add", IAddObject.class);
-        client.displayResultAddObject(obj1, 2, 3);
-        client.displayResultAddObject(obj1, 4, 4);
+        IAddObject addObject = client.getRemoteObject("//localhost/add", IAddObject.class);
+        IRunOperation runOperationObject = client.getRemoteObject("//localhost/runOperation", IRunOperation.class);
+        displayResult(addObject, 2, 3);
+        displayResult(addObject, 4, 4);
+        displayResult(runOperationObject, "add", 3, 4);
+        displayResult(runOperationObject, "mul", 3, 4);
 
-//        client.displayResultObject(obj1, new Object[] {3.0, 4.0});
-//        var met = client.getCalculateMethod(IAddObject.class, new Class[] {double.class, double.class});
+//        client.displayResultObject(addObject, new Object[] {3.0, 4.0});
+//        var met = client.getCalculateMethod(remoteObjects.IAddObject.class, new Class[] {double.class, double.class});
     }
 }

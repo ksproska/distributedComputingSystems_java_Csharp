@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="302ababa-7e4f-464c-9241-ef387cd7f9c8" name="Changes" comment="client comments">
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/IAddObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/IClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/IRunOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IRunOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/RunOperation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RMIServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIServer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ARemoteObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ARemoteObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/AddObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/AddObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IServerWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IServerWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/OperationInputType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/OperationInputType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/OperationResultType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/OperationResultType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ServerWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ServerWorker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
