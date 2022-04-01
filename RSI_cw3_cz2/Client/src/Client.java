@@ -21,6 +21,11 @@ public class Client implements IClient {
         try {
             // pobieranie referencji do zdalnego obiektu
             rObject = objectInterface.cast(java.rmi.Naming.lookup(serviceAddress));
+            System.out.printf(
+                    """
+                    Successful lookup:\u001B[32m %s\u001B[0m =>\u001B[34m %s \u001B[0m
+                    """, objectInterface.getName(), serviceAddress
+            );
         } catch (Exception e) {
             if(e.getClass() == java.rmi.ConnectException.class) {
                 System.out.println("Server is NOT RUNNING!");
