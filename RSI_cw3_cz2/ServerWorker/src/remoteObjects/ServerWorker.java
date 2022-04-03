@@ -8,12 +8,6 @@ public class ServerWorker extends ARemoteObject implements IServerWorker {
     }
 
     @Override
-    public RunOperationResultType compute(RunOperationInputType runOperationInputType) throws RemoteException {
-        return new RunOperation().calculate(runOperationInputType);
-    }
-
-
-    @Override
     public <T> T compute(ITask<T> inputITask) throws RemoteException {
         return inputITask.compute();
     }

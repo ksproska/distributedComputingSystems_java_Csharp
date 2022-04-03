@@ -41,16 +41,16 @@ public class Client implements IClient {
         return rObject;
     }
 
-    static private <T> void displayResultPattern(Object result, Class objectClass, Object ... params) {
+    static private <T> void displayResultPattern(Object result, Object obj, Object ... params) {
         System.out.printf("Result for \u001B[32m%s\u001B[0m%s => %s\n",
-                objectClass.getName(), Arrays.toString(params).replace('[', '(').replace(']', ')'), result);
+                obj, Arrays.toString(params).replace('[', '(').replace(']', ')'), result);
     }
 
     public static void main(String[] args) throws RemoteException {
         var client = new Client();
         IServerWorker serverWorker = client.getRemoteObject("//localhost/sw1", IServerWorker.class);
-        var calc = new CalculatePi();
+        var calc = new CalculatePi(5);
         var result = serverWorker.compute(calc);
-        System.out.println(result);
+        Client.displayResultPattern(result, calc);
     }
 }
