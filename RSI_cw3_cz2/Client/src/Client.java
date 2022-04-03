@@ -1,7 +1,5 @@
-import remoteObjects.IAddObject;
-import remoteObjects.IRunOperation;
-import remoteObjects.IServerWorker;
-import remoteObjects.RunOperationInputType;
+import remoteObjects.*;
+
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.Arrays;
@@ -48,21 +46,11 @@ public class Client implements IClient {
                 objectClass.getName(), Arrays.toString(params).replace('[', '(').replace(']', ')'), result);
     }
 
-    public static void displayResult(IAddObject object, double var1, double var2) throws RemoteException {
-        var result = object.calculate(var1, var2);
-        displayResultPattern(result, IAddObject.class, var1, var2);
-    }
-
-    public static void displayResult(IRunOperation object, RunOperationInputType runOperationInputType) throws RemoteException {
-        var result = object.calculate(runOperationInputType);
-        displayResultPattern(result, IRunOperation.class, runOperationInputType);
-    }
-
-
     public static void main(String[] args) throws RemoteException {
         var client = new Client();
         IServerWorker serverWorker = client.getRemoteObject("//localhost/sw1", IServerWorker.class);
-        var result = serverWorker.compute(new RunOperationInputType("add", 4, 5));
+        var calc = new CalculatePi();
+        var result = serverWorker.compute(calc);
         System.out.println(result);
     }
 }
