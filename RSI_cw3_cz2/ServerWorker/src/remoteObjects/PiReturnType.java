@@ -8,6 +8,10 @@ public class PiReturnType extends ReturnType {
         this.pi = pi;
     }
 
+    public double getPi() {
+        return pi;
+    }
+
     @Override
     public String toString() {
         return "PiReturnType{" +

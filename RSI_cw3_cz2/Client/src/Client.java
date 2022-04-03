@@ -52,8 +52,8 @@ public class Client implements IClient {
         IServerWorker sw3 = client.getRemoteObject("//localhost/sw3", IServerWorker.class);
 
         var task1 = new CalculatePi(5);
-        var task2 = new CalculateFibonacci(10);
-        var task3 = new CalculatePi(100);
+        var task2 = new CalculatePi(100);
+        var task3 = new CalculateMax(0.2, 3904, 22.33, 30000);
 
         var workers = new IServerWorker[]{sw1, sw2, sw3};
         var tasks = new Task[]{task1, task2, task3};
