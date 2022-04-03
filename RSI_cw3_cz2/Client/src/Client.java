@@ -41,16 +41,26 @@ public class Client implements IClient {
         return rObject;
     }
 
-    static private <T> void displayResultPattern(Object result, Object obj, Object ... params) {
-        System.out.printf("Result for \u001B[32m%s\u001B[0m%s => %s\n",
-                obj, Arrays.toString(params).replace('[', '(').replace(']', ')'), result);
+    static private <T> void displayResultPattern(Object result, Object obj) {
+        System.out.printf("Result for \u001B[32m%s\u001B[0m => %s\n", obj, result);
     }
 
     public static void main(String[] args) throws RemoteException {
         var client = new Client();
-        IServerWorker serverWorker = client.getRemoteObject("//localhost/sw1", IServerWorker.class);
-        var calc = new CalculatePi(5);
-        var result = serverWorker.compute(calc);
-        Client.displayResultPattern(result, calc);
+        IServerWorker sw1 = client.getRemoteObject("//localhost/sw1", IServerWorker.class);
+        IServerWorker sw2 = client.getRemoteObject("//localhost/sw2", IServerWorker.class);
+        IServerWorker sw3 = client.getRemoteObject("//localhost/sw3", IServerWorker.class);
+
+        var task1 = new CalculatePi(5);
+        var task2 = new CalculateFibonacci(10);
+        var task3 = new CalculatePi(100);
+
+        var workers = new IServerWorker[]{sw1, sw2, sw3};
+        var tasks = new Task[]{task1, task2, task3};
+
+        for (int i = 0; i < workers.length; i++) {
+            var result = workers[i].compute(tasks[i]);
+            Client.displayResultPattern(result, tasks[i]);
+        }
     }
 }

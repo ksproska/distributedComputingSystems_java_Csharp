@@ -53,9 +53,11 @@ public class ObjectRegistrator implements IObjectRegistrator {
     }
 
     public static void main(String[] args) {
-        var serverWorker = new ObjectRegistrator();
+        var objectRegistrator = new ObjectRegistrator();
         System.out.println("\sServer started running...");
-        serverWorker.registerObject("//localhost/sw1", ServerWorker.class);
+        objectRegistrator.registerObject("//localhost/sw1", ServerWorker.class);
+        objectRegistrator.registerObject("//localhost/sw2", ServerWorker.class);
+        objectRegistrator.registerObject("//localhost/sw3", ServerWorker.class);
         System.out.println("\sAll set and running.\n");
     }
 }

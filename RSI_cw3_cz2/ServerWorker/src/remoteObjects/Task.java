@@ -11,6 +11,6 @@ public class Task<T> implements ITask<T> {
     }
 
     protected void displayFinished(Object ... params) {
-        System.out.printf("Finished calculating \u001B[32m%s\u001B[0m\n", this);
+//        System.out.printf("Finished calculating \u001B[32m%s\u001B[0m\n", this);
     }
 }
