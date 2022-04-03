@@ -1,14 +1,14 @@
 import remoteObjects.ARemoteObject;
-import remoteObjects.AddObject;
-import remoteObjects.RunOperation;
+import remoteObjects.ServerWorker;
+
 import java.net.MalformedURLException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
 
-public class ServerWorker implements IServerWorker {
-    public ServerWorker() {
+public class ObjectRegistrator implements IObjectRegistrator {
+    public ObjectRegistrator() {
         //
         System.setProperty("java.security.policy", System.getProperty("user.dir") + "\\srv.policy");
         // włączenie zezwoleń poprzez utworzenie/ustawienie systemowego menadżera bezpieczeństwa
@@ -53,10 +53,9 @@ public class ServerWorker implements IServerWorker {
     }
 
     public static void main(String[] args) {
-        var serverWorker = new ServerWorker();
+        var serverWorker = new ObjectRegistrator();
         System.out.println("\sServer started running...");
-        serverWorker.registerObject("//localhost/add", AddObject.class);
-        serverWorker.registerObject("//localhost/runOperation", RunOperation.class);
+        serverWorker.registerObject("//localhost/sw1", ServerWorker.class);
         System.out.println("\sAll set and running.\n");
     }
 }

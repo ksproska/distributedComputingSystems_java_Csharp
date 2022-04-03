@@ -5,22 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f56a05c7-16c6-433e-b027-57100a6bb94b" name="Changes" comment="comments">
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/remoteObjects/RunOperationInputType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/remoteObjects/RunOperationResultType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../RMIClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RMIClient/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/remoteObjects/IRunOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/Client/src/remoteObjects/IRunOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IServerWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/IServerWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ServerWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/ServerWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/ARemoteObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/ARemoteObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/AddObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/AddObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/IAddObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/IAddObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/IRunOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/IRunOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/RunOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/RunOperation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/RunOperationInputType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/RunOperationInputType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/RunOperationResultType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../RSI_cw3_cz2/ServerWorker/src/remoteObjects/RunOperationResultType.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +58,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648292050757</updated>
       <workItem from="1648373764877" duration="1965000" />
-      <workItem from="1648791892449" duration="7985000" />
+      <workItem from="1648791892449" duration="8519000" />
     </task>
     <task id="LOCAL-00001" summary="exercise pdf">
       <created>1648373946784</created>

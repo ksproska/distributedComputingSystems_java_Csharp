@@ -1,5 +1,6 @@
 import remoteObjects.IAddObject;
 import remoteObjects.IRunOperation;
+import remoteObjects.IServerWorker;
 import remoteObjects.RunOperationInputType;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
@@ -42,20 +43,6 @@ public class Client implements IClient {
         return rObject;
     }
 
-//    <T extends Remote> Method getCalculateMethod(Class<T> objectClass, Class[] params) throws NoSuchMethodException {
-//        return objectClass.getMethod("calculate", params);
-//    }
-//
-//    <T extends Remote> void displayResultObject(T obj1, Object [] params) {
-//        try {
-//            Class[] paramsClasses = Arrays.stream(params).map(Object::getClass).toArray(Class[]::new);
-//            Method calculateMethod = getCalculateMethod(obj1.getClass(), paramsClasses);
-//            System.out.println(calculateMethod.invoke(obj1, params));
-//        } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
     static private <T> void displayResultPattern(Object result, Class objectClass, Object ... params) {
         System.out.printf("Result for \u001B[32m%s\u001B[0m%s => %s\n",
                 objectClass.getName(), Arrays.toString(params).replace('[', '(').replace(']', ')'), result);
@@ -74,14 +61,8 @@ public class Client implements IClient {
 
     public static void main(String[] args) throws RemoteException {
         var client = new Client();
-        IAddObject addObject = client.getRemoteObject("//localhost/add", IAddObject.class);
-        IRunOperation runOperationObject = client.getRemoteObject("//localhost/runOperation", IRunOperation.class);
-        displayResult(addObject, 2, 3);
-        displayResult(addObject, 4, 4);
-        displayResult(runOperationObject, new RunOperationInputType("add", 3, 4));
-        displayResult(runOperationObject, new RunOperationInputType("add", 3, 4));
-
-//        client.displayResultObject(addObject, new Object[] {3.0, 4.0});
-//        var met = client.getCalculateMethod(remoteObjects.IAddObject.class, new Class[] {double.class, double.class});
+        IServerWorker serverWorker = client.getRemoteObject("//localhost/sw1", IServerWorker.class);
+        var result = serverWorker.compute(new RunOperationInputType("add", 4, 5));
+        System.out.println(result);
     }
 }
