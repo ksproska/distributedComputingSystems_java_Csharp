@@ -8,13 +8,14 @@ import java.rmi.registry.Registry;
 
 
 public class ObjectRegistrator implements IObjectRegistrator {
+    public static final String hostname = "localhost";
     public ObjectRegistrator() {
-        //
+        System.setProperty("java.rmi.server.hostname", hostname);
         System.setProperty("java.security.policy", System.getProperty("user.dir") + "\\srv.policy");
         // włączenie zezwoleń poprzez utworzenie/ustawienie systemowego menadżera bezpieczeństwa
-        if (System.getSecurityManager() == null) {
-            System.setSecurityManager(new SecurityManager());
-        }
+//        if (System.getSecurityManager() == null) {
+//            System.setSecurityManager(new SecurityManager());
+//        }
         // kod utworzenia rejestru dla serwera - realizacja programowa, jesli rejestr i serwer odpalane sa na tym samym komputerze
         // TODO: skomentowac, jesli reczna konfiguracja i uruchomienie
         try {
@@ -53,11 +54,12 @@ public class ObjectRegistrator implements IObjectRegistrator {
     }
 
     public static void main(String[] args) {
+//        MyData.info();
         var objectRegistrator = new ObjectRegistrator();
         System.out.println("\sServer started running...");
-        objectRegistrator.registerObject("//localhost/sw1", ServerWorker.class);
-        objectRegistrator.registerObject("//localhost/sw2", ServerWorker.class);
-        objectRegistrator.registerObject("//localhost/sw3", ServerWorker.class);
+        objectRegistrator.registerObject("//" + hostname + "/sw1", ServerWorker.class);
+        objectRegistrator.registerObject("//" + hostname + "/sw2", ServerWorker.class);
+        objectRegistrator.registerObject("//" + hostname + "/sw3", ServerWorker.class);
         System.out.println("\sAll set and running.\n");
     }
 }

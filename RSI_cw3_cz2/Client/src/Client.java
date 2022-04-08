@@ -2,10 +2,10 @@ import remoteObjects.*;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import java.util.Arrays;
 
 
 public class Client implements IClient {
+    public static final String hostname = "localhost";
     public Client() {
         // utworzenie/ustawienie systemowego menadżera bezpieczeństwa
         // (uwaga: nie jest to wymagane we wszystkich przypadkach – tu w kliencie jest zakomentowane –
@@ -14,6 +14,7 @@ public class Client implements IClient {
 //        if (System.getSecurityManager() == null)
 //            System.setSecurityManager(new SecurityManager());
     }
+
     @Override
     public <T extends Remote> T getRemoteObject(String serviceAddress, Class<T> objectInterface) {
         T rObject = null;
@@ -47,9 +48,9 @@ public class Client implements IClient {
 
     public static void main(String[] args) throws RemoteException {
         var client = new Client();
-        IServerWorker sw1 = client.getRemoteObject("//localhost/sw1", IServerWorker.class);
-        IServerWorker sw2 = client.getRemoteObject("//localhost/sw2", IServerWorker.class);
-        IServerWorker sw3 = client.getRemoteObject("//localhost/sw3", IServerWorker.class);
+        IServerWorker sw1 = client.getRemoteObject("//" + hostname + "/sw1", IServerWorker.class);
+        IServerWorker sw2 = client.getRemoteObject("//" + hostname + "/sw2", IServerWorker.class);
+        IServerWorker sw3 = client.getRemoteObject("//" + hostname + "/sw3", IServerWorker.class);
 
         var task1 = new CalculatePi(5);
         var task2 = new CalculatePi(100);

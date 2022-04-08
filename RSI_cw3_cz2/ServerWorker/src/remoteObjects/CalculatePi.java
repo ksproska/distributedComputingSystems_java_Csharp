@@ -1,7 +1,9 @@
 package remoteObjects;
 
 
-public class CalculatePi extends Task<PiReturnType> {
+import java.math.BigDecimal;
+
+public class CalculatePi extends Task<BigDecimal> {
     private int precision;
 
     public CalculatePi(int precision) {
@@ -9,9 +11,9 @@ public class CalculatePi extends Task<PiReturnType> {
     }
 
     @Override
-    public PiReturnType compute() {
+    public BigDecimal compute() {
         this.displayRunning(precision);
-        var result = new PiReturnType(3.14);
+        var result = PiCalc.compute(precision);
         this.displayFinished(precision);
         return result;
     }
