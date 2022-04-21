@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\rozproszone_systemy\\RSI_cw2_cz1\\GrpcClient\\GrpcClient\\GrpcClient.csproj": {}
+    "C:\\Users\\mkuch\\IdeaProjects\\rozproszone_systemy\\RSI_cw2_cz1\\GrpcClient\\GrpcClient\\GrpcClient.csproj": {}
   },
   "projects": {
-    "E:\\rozproszone_systemy\\RSI_cw2_cz1\\GrpcClient\\GrpcClient\\GrpcClient.csproj": {
+    "C:\\Users\\mkuch\\IdeaProjects\\rozproszone_systemy\\RSI_cw2_cz1\\GrpcClient\\GrpcClient\\GrpcClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\rozproszone_systemy\\RSI_cw2_cz1\\GrpcClient\\GrpcClient\\GrpcClient.csproj",
+        "projectUniqueName": "C:\\Users\\mkuch\\IdeaProjects\\rozproszone_systemy\\RSI_cw2_cz1\\GrpcClient\\GrpcClient\\GrpcClient.csproj",
         "projectName": "GrpcClient",
-        "projectPath": "E:\\rozproszone_systemy\\RSI_cw2_cz1\\GrpcClient\\GrpcClient\\GrpcClient.csproj",
-        "packagesPath": "D:\\Lab\\Profiles\\UsersRSI\\254534\\.nuget\\packages\\",
-        "outputPath": "E:\\rozproszone_systemy\\RSI_cw2_cz1\\GrpcClient\\GrpcClient\\obj\\",
+        "projectPath": "C:\\Users\\mkuch\\IdeaProjects\\rozproszone_systemy\\RSI_cw2_cz1\\GrpcClient\\GrpcClient\\GrpcClient.csproj",
+        "packagesPath": "C:\\Users\\mkuch\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mkuch\\IdeaProjects\\rozproszone_systemy\\RSI_cw2_cz1\\GrpcClient\\GrpcClient\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "D:\\Lab\\Profiles\\UsersRSI\\254534\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\mkuch\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -50,7 +46,7 @@
             },
             "Grpc.AspNetCore": {
               "target": "Package",
-              "version": "[2.44.0, )"
+              "version": "[2.27.0, )"
             },
             "Grpc.Net.Client": {
               "target": "Package",
@@ -78,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

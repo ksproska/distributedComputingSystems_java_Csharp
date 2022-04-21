@@ -1,0 +1,2 @@
+obj\Release\net5.0\Protos/Mygrpc.cs \
+obj\Release\net5.0\Protos/MygrpcGrpc.cs: Protos/mygrpc.proto

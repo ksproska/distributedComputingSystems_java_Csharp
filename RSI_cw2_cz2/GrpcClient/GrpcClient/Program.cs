@@ -1,48 +1,20 @@
 ﻿using Grpc.Net.Client;
 using GrpcServer;
 using System;
-using System.Net;
-using System.Net.Sockets;
 using System.Threading.Tasks;
 
 namespace GrpcClient
 {
     class Program
     {
-        class MyData
-        {
-            public static void info()
-            {
-                var dateNow = DateTime.Now.ToString("yyyy'/'MM'/'dd' 'HH':'mm':'ss");
-                Console.WriteLine(dateNow);
-                Console.WriteLine("Kamila Sproska 254534");
-                Console.WriteLine(Environment.OSVersion.VersionString);
-                Console.WriteLine(Environment.UserName);
-                Console.WriteLine(Environment.Version.ToString());
-                Console.WriteLine("IPs:");
-
-                var host = Dns.GetHostEntry(Dns.GetHostName());
-                foreach (var ip in host.AddressList)
-                {
-                    if (ip.AddressFamily == AddressFamily.InterNetwork)
-                    {
-                        Console.WriteLine(ip.ToString());
-                    }
-                }
-            }
-        }
-
         static async Task Main(string[] args)
         {
-            MyData.info();
-            Console.WriteLine("\nStarting gRPC Client");
-            //AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
-            using var channel = GrpcChannel.ForAddress("http://25.44.253.40:5000");
+            Console.WriteLine("Starting gRPC Client");
+            using var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var client = new GrpcService.GrpcServiceClient(channel);
             Console.Write("Enter the name: ");
             String str = Console.ReadLine();
-            Console.Write("Enter age: ");
-            int val = Int32.Parse(Console.ReadLine());
+            int val = 21;
             var reply = await client.GrpcProcAsync(new GrpcRequest
             {
                 Name = str,
