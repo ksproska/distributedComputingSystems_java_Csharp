@@ -6,6 +6,7 @@ package shapesAnalyzer;
 
 service ShapesAnalyzer {
   rpc GetTriangleSurface (TriangleSides) returns (Surface);
+  rpc IsTriangleRightAngle (TriangleSides) returns (IsRightAngle);
 }
 
 message TriangleSides {
@@ -16,4 +17,8 @@ message TriangleSides {
 
 message Surface {
   double size = 1;
+}
+
+message IsRightAngle {
+	bool message = 1;
 }

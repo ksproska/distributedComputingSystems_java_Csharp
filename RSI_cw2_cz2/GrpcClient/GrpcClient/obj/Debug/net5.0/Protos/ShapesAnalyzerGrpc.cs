@@ -49,6 +49,8 @@ namespace GrpcClient {
     static readonly grpc::Marshaller<global::GrpcClient.TriangleSides> __Marshaller_shapesAnalyzer_TriangleSides = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.TriangleSides.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcClient.Surface> __Marshaller_shapesAnalyzer_Surface = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.Surface.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::GrpcClient.IsRightAngle> __Marshaller_shapesAnalyzer_IsRightAngle = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.IsRightAngle.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::GrpcClient.TriangleSides, global::GrpcClient.Surface> __Method_GetTriangleSurface = new grpc::Method<global::GrpcClient.TriangleSides, global::GrpcClient.Surface>(
@@ -57,6 +59,14 @@ namespace GrpcClient {
         "GetTriangleSurface",
         __Marshaller_shapesAnalyzer_TriangleSides,
         __Marshaller_shapesAnalyzer_Surface);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcClient.TriangleSides, global::GrpcClient.IsRightAngle> __Method_IsTriangleRightAngle = new grpc::Method<global::GrpcClient.TriangleSides, global::GrpcClient.IsRightAngle>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "IsTriangleRightAngle",
+        __Marshaller_shapesAnalyzer_TriangleSides,
+        __Marshaller_shapesAnalyzer_IsRightAngle);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -110,6 +120,26 @@ namespace GrpcClient {
       public virtual grpc::AsyncUnaryCall<global::GrpcClient.Surface> GetTriangleSurfaceAsync(global::GrpcClient.TriangleSides request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTriangleSurface, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::GrpcClient.IsRightAngle IsTriangleRightAngle(global::GrpcClient.TriangleSides request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IsTriangleRightAngle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::GrpcClient.IsRightAngle IsTriangleRightAngle(global::GrpcClient.TriangleSides request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_IsTriangleRightAngle, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.IsRightAngle> IsTriangleRightAngleAsync(global::GrpcClient.TriangleSides request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IsTriangleRightAngleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.IsRightAngle> IsTriangleRightAngleAsync(global::GrpcClient.TriangleSides request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_IsTriangleRightAngle, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

@@ -3,6 +3,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace GrpcServer
@@ -15,8 +16,18 @@ namespace GrpcServer
             _logger = logger;
         }
 
+        public static void PrintRunningName(string name)
+        {
+            Console.Write("\nMethod ");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.Write(name);
+            Console.ResetColor();
+            Console.WriteLine(" is running.");
+        }
+
         public override Task<Surface> GetTriangleSurface(TriangleSides request, ServerCallContext context)
         {
+            PrintRunningName(MethodBase.GetCurrentMethod().Name);
             double p = (request.A + request.B + request.C) / 2;
             double multiplied = p * Math.Abs(p - request.A) * Math.Abs(p - request.B) * Math.Abs(p - request.C);
             double size = Math.Sqrt(multiplied);
@@ -25,6 +36,15 @@ namespace GrpcServer
             return Task.FromResult(new Surface
             {
                 Size = size
+            });
+        }
+
+        public override Task<IsRightAngle> IsTriangleRightAngle(TriangleSides request, ServerCallContext context)
+        {
+            PrintRunningName(MethodBase.GetCurrentMethod().Name);
+            return Task.FromResult(new IsRightAngle
+            {
+                Message = false
             });
         }
     }
