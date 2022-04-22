@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServer";
+
+package shapesAnalyzer;
+
+service ShapesAnalyzer {
+  rpc GetTriangleSurface (TriangleSides) returns (Surface);
+}
+
+message TriangleSides {
+  double a = 1;
+  double b = 2;
+  double c = 3;
+}
+
+message Surface {
+  double size = 1;
+}

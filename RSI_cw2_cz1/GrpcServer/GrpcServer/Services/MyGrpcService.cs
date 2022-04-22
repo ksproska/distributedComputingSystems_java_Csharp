@@ -18,7 +18,7 @@ namespace GrpcServer
         {
             string msg;
             int val;
-            val = request.Age * 12 * 365;
+            val = request.Age * 365;
             msg = "Hello " + request.Name + " being " + request.Age + " years old.";
             return Task.FromResult(new GrpcResponse { Message = msg, Days = val });
         }

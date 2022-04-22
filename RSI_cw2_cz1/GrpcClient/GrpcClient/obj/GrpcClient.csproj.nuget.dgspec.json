@@ -42,7 +42,11 @@
           "dependencies": {
             "Google.Protobuf": {
               "target": "Package",
-              "version": "[3.19.4, )"
+              "version": "[3.20.0, )"
+            },
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.44.0, )"
             },
             "Grpc.Net.Client": {
               "target": "Package",

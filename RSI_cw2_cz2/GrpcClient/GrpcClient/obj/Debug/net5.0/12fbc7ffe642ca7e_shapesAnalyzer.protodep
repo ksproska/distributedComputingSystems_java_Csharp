@@ -1,0 +1,2 @@
+obj\Debug\net5.0\Protos/ShapesAnalyzer.cs \
+obj\Debug\net5.0\Protos/ShapesAnalyzerGrpc.cs: Protos/shapesAnalyzer.proto
