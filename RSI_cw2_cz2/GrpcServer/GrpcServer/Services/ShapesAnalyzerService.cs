@@ -52,5 +52,19 @@ namespace GrpcServer
                 Message = message
             });
         }
+
+        public override Task<IsIsosceles> IsTriangleIsosceles(TriangleSides request, ServerCallContext context)
+        {
+            PrintRunningName(MethodBase.GetCurrentMethod().Name);
+            bool message = false;
+            if (request.A == request.B || request.B == request.C || request.C == request.A)
+            {
+                message = true;
+            }
+            return Task.FromResult(new IsIsosceles
+            {
+                Message = message
+            });
+        }
     }
 }

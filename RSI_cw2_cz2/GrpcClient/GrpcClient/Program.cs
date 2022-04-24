@@ -51,6 +51,8 @@ namespace GrpcClient
                 Console.WriteLine("Triangle with sides " + triangle.ToString() + " has size " + replyTriangleSurface.Size);
                 var replayIsRight = await client.IsTriangleRightAngleAsync(triangle);
                 Console.WriteLine("Triangle with sides " + triangle.ToString() + " is right: " + replayIsRight.Message);
+                var replayIsIsosceles = await client.IsTriangleIsoscelesAsync(triangle);
+                Console.WriteLine("Triangle with sides " + triangle.ToString() + " is isosceles: " + replayIsIsosceles.Message);
 
                 PrintGreen("\nPress any key to exit...");
 

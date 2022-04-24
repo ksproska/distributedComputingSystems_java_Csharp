@@ -27,17 +27,21 @@ namespace GrpcServer {
             "ChtQcm90b3Mvc2hhcGVzQW5hbHl6ZXIucHJvdG8SDnNoYXBlc0FuYWx5emVy",
             "IjAKDVRyaWFuZ2xlU2lkZXMSCQoBYRgBIAEoARIJCgFiGAIgASgBEgkKAWMY",
             "AyABKAEiFwoHU3VyZmFjZRIMCgRzaXplGAEgASgBIh8KDElzUmlnaHRBbmds",
-            "ZRIPCgdtZXNzYWdlGAEgASgIMrMBCg5TaGFwZXNBbmFseXplchJMChJHZXRU",
-            "cmlhbmdsZVN1cmZhY2USHS5zaGFwZXNBbmFseXplci5UcmlhbmdsZVNpZGVz",
-            "Ghcuc2hhcGVzQW5hbHl6ZXIuU3VyZmFjZRJTChRJc1RyaWFuZ2xlUmlnaHRB",
-            "bmdsZRIdLnNoYXBlc0FuYWx5emVyLlRyaWFuZ2xlU2lkZXMaHC5zaGFwZXNB",
-            "bmFseXplci5Jc1JpZ2h0QW5nbGVCDaoCCkdycGNTZXJ2ZXJiBnByb3RvMw=="));
+            "ZRIPCgdtZXNzYWdlGAEgASgIIh4KC0lzSXNvc2NlbGVzEg8KB21lc3NhZ2UY",
+            "ASABKAgyhgIKDlNoYXBlc0FuYWx5emVyEkwKEkdldFRyaWFuZ2xlU3VyZmFj",
+            "ZRIdLnNoYXBlc0FuYWx5emVyLlRyaWFuZ2xlU2lkZXMaFy5zaGFwZXNBbmFs",
+            "eXplci5TdXJmYWNlElMKFElzVHJpYW5nbGVSaWdodEFuZ2xlEh0uc2hhcGVz",
+            "QW5hbHl6ZXIuVHJpYW5nbGVTaWRlcxocLnNoYXBlc0FuYWx5emVyLklzUmln",
+            "aHRBbmdsZRJRChNJc1RyaWFuZ2xlSXNvc2NlbGVzEh0uc2hhcGVzQW5hbHl6",
+            "ZXIuVHJpYW5nbGVTaWRlcxobLnNoYXBlc0FuYWx5emVyLklzSXNvc2NlbGVz",
+            "Qg2qAgpHcnBjU2VydmVyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.TriangleSides), global::GrpcServer.TriangleSides.Parser, new[]{ "A", "B", "C" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.Surface), global::GrpcServer.Surface.Parser, new[]{ "Size" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.IsRightAngle), global::GrpcServer.IsRightAngle.Parser, new[]{ "Message" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.IsRightAngle), global::GrpcServer.IsRightAngle.Parser, new[]{ "Message" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.IsIsosceles), global::GrpcServer.IsIsosceles.Parser, new[]{ "Message" }, null, null, null, null)
           }));
     }
     #endregion
@@ -583,6 +587,178 @@ namespace GrpcServer {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void MergeFrom(IsRightAngle other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message != false) {
+        Message = other.Message;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Message = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Message = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class IsIsosceles : pb::IMessage<IsIsosceles>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<IsIsosceles> _parser = new pb::MessageParser<IsIsosceles>(() => new IsIsosceles());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IsIsosceles> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsIsosceles() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsIsosceles(IsIsosceles other) : this() {
+      message_ = other.message_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsIsosceles Clone() {
+      return new IsIsosceles(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private bool message_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Message {
+      get { return message_; }
+      set {
+        message_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IsIsosceles);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IsIsosceles other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message != false) hash ^= Message.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Message);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IsIsosceles other) {
       if (other == null) {
         return;
       }
