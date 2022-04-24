@@ -660,19 +660,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ksproskaStacjonarny\\.nuget\\packages\\": {}
+    "C:\\Users\\mkuch\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\rozproszone_systemy\\RSI_cw2_cz2\\GrpcClient\\GrpcClient\\GrpcClient.csproj",
+      "projectUniqueName": "C:\\Users\\mkuch\\IdeaProjects\\rozproszone_systemy\\RSI_cw2_cz2\\GrpcClient\\GrpcClient\\GrpcClient.csproj",
       "projectName": "GrpcClient",
-      "projectPath": "F:\\rozproszone_systemy\\RSI_cw2_cz2\\GrpcClient\\GrpcClient\\GrpcClient.csproj",
-      "packagesPath": "C:\\Users\\ksproskaStacjonarny\\.nuget\\packages\\",
-      "outputPath": "F:\\rozproszone_systemy\\RSI_cw2_cz2\\GrpcClient\\GrpcClient\\obj\\",
+      "projectPath": "C:\\Users\\mkuch\\IdeaProjects\\rozproszone_systemy\\RSI_cw2_cz2\\GrpcClient\\GrpcClient\\GrpcClient.csproj",
+      "packagesPath": "C:\\Users\\mkuch\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mkuch\\IdeaProjects\\rozproszone_systemy\\RSI_cw2_cz2\\GrpcClient\\GrpcClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ksproskaStacjonarny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mkuch\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -732,7 +732,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

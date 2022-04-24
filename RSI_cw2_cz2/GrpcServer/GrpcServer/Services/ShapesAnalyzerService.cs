@@ -42,9 +42,14 @@ namespace GrpcServer
         public override Task<IsRightAngle> IsTriangleRightAngle(TriangleSides request, ServerCallContext context)
         {
             PrintRunningName(MethodBase.GetCurrentMethod().Name);
+            bool message = false;
+            if (request.A * request.A == request.B * request.B + request.C * request.C || request.B * request.B == request.A * request.A + request.C * request.C || request.C * request.C == request.A * request.A + request.B * request.B)
+            {
+                message = true;
+            }
             return Task.FromResult(new IsRightAngle
             {
-                Message = false
+                Message = message
             });
         }
     }

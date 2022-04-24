@@ -5,18 +5,18 @@ option csharp_namespace = "GrpcClient";
 package shapesAnalyzer;
 
 service ShapesAnalyzer {
-  rpc GetTriangleSurface (TriangleSides) returns (Surface);
-  rpc IsTriangleRightAngle (TriangleSides) returns (IsRightAngle);
+	rpc GetTriangleSurface (TriangleSides) returns (Surface);
+	rpc IsTriangleRightAngle (TriangleSides) returns (IsRightAngle);
 }
 
 message TriangleSides {
-  double a = 1;
-  double b = 2;
-  double c = 3;
+	double a = 1;
+	double b = 2;
+	double c = 3;
 }
 
 message Surface {
-  double size = 1;
+	double size = 1;
 }
 
 message IsRightAngle {
