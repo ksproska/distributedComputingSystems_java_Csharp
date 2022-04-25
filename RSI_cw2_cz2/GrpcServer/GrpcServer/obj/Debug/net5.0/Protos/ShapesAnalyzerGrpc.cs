@@ -43,10 +43,18 @@ namespace GrpcServer {
     }
 
     static readonly grpc::Marshaller<global::GrpcServer.TriangleSides> __Marshaller_shapesAnalyzer_TriangleSides = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.TriangleSides.Parser));
+    static readonly grpc::Marshaller<global::GrpcServer.IsTriangle> __Marshaller_shapesAnalyzer_IsTriangle = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.IsTriangle.Parser));
     static readonly grpc::Marshaller<global::GrpcServer.Surface> __Marshaller_shapesAnalyzer_Surface = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.Surface.Parser));
     static readonly grpc::Marshaller<global::GrpcServer.Perimeter> __Marshaller_shapesAnalyzer_Perimeter = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.Perimeter.Parser));
     static readonly grpc::Marshaller<global::GrpcServer.IsRightAngle> __Marshaller_shapesAnalyzer_IsRightAngle = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.IsRightAngle.Parser));
     static readonly grpc::Marshaller<global::GrpcServer.IsIsosceles> __Marshaller_shapesAnalyzer_IsIsosceles = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcServer.IsIsosceles.Parser));
+
+    static readonly grpc::Method<global::GrpcServer.TriangleSides, global::GrpcServer.IsTriangle> __Method_IsTriangleOk = new grpc::Method<global::GrpcServer.TriangleSides, global::GrpcServer.IsTriangle>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "IsTriangleOk",
+        __Marshaller_shapesAnalyzer_TriangleSides,
+        __Marshaller_shapesAnalyzer_IsTriangle);
 
     static readonly grpc::Method<global::GrpcServer.TriangleSides, global::GrpcServer.Surface> __Method_GetTriangleSurface = new grpc::Method<global::GrpcServer.TriangleSides, global::GrpcServer.Surface>(
         grpc::MethodType.Unary,
@@ -86,6 +94,11 @@ namespace GrpcServer {
     [grpc::BindServiceMethod(typeof(ShapesAnalyzer), "BindService")]
     public abstract partial class ShapesAnalyzerBase
     {
+      public virtual global::System.Threading.Tasks.Task<global::GrpcServer.IsTriangle> IsTriangleOk(global::GrpcServer.TriangleSides request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
       public virtual global::System.Threading.Tasks.Task<global::GrpcServer.Surface> GetTriangleSurface(global::GrpcServer.TriangleSides request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -113,6 +126,7 @@ namespace GrpcServer {
     public static grpc::ServerServiceDefinition BindService(ShapesAnalyzerBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_IsTriangleOk, serviceImpl.IsTriangleOk)
           .AddMethod(__Method_GetTriangleSurface, serviceImpl.GetTriangleSurface)
           .AddMethod(__Method_GetTrianglePerimeter, serviceImpl.GetTrianglePerimeter)
           .AddMethod(__Method_IsTriangleRightAngle, serviceImpl.IsTriangleRightAngle)
@@ -125,6 +139,7 @@ namespace GrpcServer {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ShapesAnalyzerBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_IsTriangleOk, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcServer.TriangleSides, global::GrpcServer.IsTriangle>(serviceImpl.IsTriangleOk));
       serviceBinder.AddMethod(__Method_GetTriangleSurface, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcServer.TriangleSides, global::GrpcServer.Surface>(serviceImpl.GetTriangleSurface));
       serviceBinder.AddMethod(__Method_GetTrianglePerimeter, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcServer.TriangleSides, global::GrpcServer.Perimeter>(serviceImpl.GetTrianglePerimeter));
       serviceBinder.AddMethod(__Method_IsTriangleRightAngle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcServer.TriangleSides, global::GrpcServer.IsRightAngle>(serviceImpl.IsTriangleRightAngle));

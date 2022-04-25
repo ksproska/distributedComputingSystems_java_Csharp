@@ -26,21 +26,25 @@ namespace GrpcServer {
           string.Concat(
             "ChtQcm90b3Mvc2hhcGVzQW5hbHl6ZXIucHJvdG8SDnNoYXBlc0FuYWx5emVy",
             "IjAKDVRyaWFuZ2xlU2lkZXMSCQoBYRgBIAEoARIJCgFiGAIgASgBEgkKAWMY",
-            "AyABKAEiFgoJUGVyaW1ldGVyEgkKAXAYASABKAEiFwoHU3VyZmFjZRIMCgRz",
-            "aXplGAEgASgBIh8KDElzUmlnaHRBbmdsZRIPCgdtZXNzYWdlGAEgASgIIh4K",
-            "C0lzSXNvc2NlbGVzEg8KB21lc3NhZ2UYASABKAgy2AIKDlNoYXBlc0FuYWx5",
-            "emVyEkwKEkdldFRyaWFuZ2xlU3VyZmFjZRIdLnNoYXBlc0FuYWx5emVyLlRy",
-            "aWFuZ2xlU2lkZXMaFy5zaGFwZXNBbmFseXplci5TdXJmYWNlElAKFEdldFRy",
-            "aWFuZ2xlUGVyaW1ldGVyEh0uc2hhcGVzQW5hbHl6ZXIuVHJpYW5nbGVTaWRl",
-            "cxoZLnNoYXBlc0FuYWx5emVyLlBlcmltZXRlchJTChRJc1RyaWFuZ2xlUmln",
-            "aHRBbmdsZRIdLnNoYXBlc0FuYWx5emVyLlRyaWFuZ2xlU2lkZXMaHC5zaGFw",
-            "ZXNBbmFseXplci5Jc1JpZ2h0QW5nbGUSUQoTSXNUcmlhbmdsZUlzb3NjZWxl",
-            "cxIdLnNoYXBlc0FuYWx5emVyLlRyaWFuZ2xlU2lkZXMaGy5zaGFwZXNBbmFs",
-            "eXplci5Jc0lzb3NjZWxlc0INqgIKR3JwY1NlcnZlcmIGcHJvdG8z"));
+            "AyABKAEiLwoKSXNUcmlhbmdsZRIPCgdtZXNzYWdlGAEgASgIEhAKCHRyaWFu",
+            "Z2xlGAIgASgJIhYKCVBlcmltZXRlchIJCgFwGAEgASgBIhcKB1N1cmZhY2US",
+            "DAoEc2l6ZRgBIAEoASIfCgxJc1JpZ2h0QW5nbGUSDwoHbWVzc2FnZRgBIAEo",
+            "CCIeCgtJc0lzb3NjZWxlcxIPCgdtZXNzYWdlGAEgASgIMqMDCg5TaGFwZXNB",
+            "bmFseXplchJJCgxJc1RyaWFuZ2xlT2sSHS5zaGFwZXNBbmFseXplci5Ucmlh",
+            "bmdsZVNpZGVzGhouc2hhcGVzQW5hbHl6ZXIuSXNUcmlhbmdsZRJMChJHZXRU",
+            "cmlhbmdsZVN1cmZhY2USHS5zaGFwZXNBbmFseXplci5UcmlhbmdsZVNpZGVz",
+            "Ghcuc2hhcGVzQW5hbHl6ZXIuU3VyZmFjZRJQChRHZXRUcmlhbmdsZVBlcmlt",
+            "ZXRlchIdLnNoYXBlc0FuYWx5emVyLlRyaWFuZ2xlU2lkZXMaGS5zaGFwZXNB",
+            "bmFseXplci5QZXJpbWV0ZXISUwoUSXNUcmlhbmdsZVJpZ2h0QW5nbGUSHS5z",
+            "aGFwZXNBbmFseXplci5UcmlhbmdsZVNpZGVzGhwuc2hhcGVzQW5hbHl6ZXIu",
+            "SXNSaWdodEFuZ2xlElEKE0lzVHJpYW5nbGVJc29zY2VsZXMSHS5zaGFwZXNB",
+            "bmFseXplci5UcmlhbmdsZVNpZGVzGhsuc2hhcGVzQW5hbHl6ZXIuSXNJc29z",
+            "Y2VsZXNCDaoCCkdycGNTZXJ2ZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.TriangleSides), global::GrpcServer.TriangleSides.Parser, new[]{ "A", "B", "C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.IsTriangle), global::GrpcServer.IsTriangle.Parser, new[]{ "Message", "Triangle" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.Perimeter), global::GrpcServer.Perimeter.Parser, new[]{ "P" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.Surface), global::GrpcServer.Surface.Parser, new[]{ "Size" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.IsRightAngle), global::GrpcServer.IsRightAngle.Parser, new[]{ "Message" }, null, null, null, null),
@@ -295,6 +299,214 @@ namespace GrpcServer {
 
   }
 
+  public sealed partial class IsTriangle : pb::IMessage<IsTriangle>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<IsTriangle> _parser = new pb::MessageParser<IsTriangle>(() => new IsTriangle());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<IsTriangle> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsTriangle() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsTriangle(IsTriangle other) : this() {
+      message_ = other.message_;
+      triangle_ = other.triangle_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public IsTriangle Clone() {
+      return new IsTriangle(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private bool message_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Message {
+      get { return message_; }
+      set {
+        message_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "triangle" field.</summary>
+    public const int TriangleFieldNumber = 2;
+    private string triangle_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Triangle {
+      get { return triangle_; }
+      set {
+        triangle_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as IsTriangle);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(IsTriangle other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      if (Triangle != other.Triangle) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message != false) hash ^= Message.GetHashCode();
+      if (Triangle.Length != 0) hash ^= Triangle.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Message);
+      }
+      if (Triangle.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Triangle);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Message);
+      }
+      if (Triangle.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Triangle);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message != false) {
+        size += 1 + 1;
+      }
+      if (Triangle.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Triangle);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(IsTriangle other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message != false) {
+        Message = other.Message;
+      }
+      if (other.Triangle.Length != 0) {
+        Triangle = other.Triangle;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Message = input.ReadBool();
+            break;
+          }
+          case 18: {
+            Triangle = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Message = input.ReadBool();
+            break;
+          }
+          case 18: {
+            Triangle = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class Perimeter : pb::IMessage<Perimeter>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -307,7 +519,7 @@ namespace GrpcServer {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[1]; }
+      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -479,7 +691,7 @@ namespace GrpcServer {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[2]; }
+      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -651,7 +863,7 @@ namespace GrpcServer {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[3]; }
+      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -823,7 +1035,7 @@ namespace GrpcServer {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[4]; }
+      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -24,6 +24,57 @@ namespace GrpcServer
             Console.ResetColor();
             Console.WriteLine(" is running.");
         }
+
+        public override Task<IsTriangle> IsTriangleOk(TriangleSides request, ServerCallContext context)
+        {
+            PrintRunningName(MethodBase.GetCurrentMethod().Name);
+            bool message = false;
+            string triangle = "non-traingle";
+            double longest;
+            double one = 0;
+            double two = 0;
+         
+            longest = Math.Max(Math.Max(request.A, request.B), request.C);
+            if (longest == request.A)
+            {
+                one = request.B;
+                two = request.C;
+            }
+            else if (longest == request.B)
+            {
+                one = request.A;
+                two = request.C;
+            }
+            else if (longest == request.C)
+            {
+                one = request.A;
+                two = request.B;
+            }
+                
+            if (one + two > longest && request.A > 0 && request.B > 0 && request.C > 0)
+            {
+                message = true;
+                if (one * one + two * two == longest * longest)
+                {
+                triangle = "right";
+                }
+                else if (one * one + two * two < longest * longest)
+                {
+                    triangle = "obtuse";
+                }
+                else if (one * one + two * two > longest * longest)
+                {
+                    triangle = "acute";
+                }
+            } 
+            
+            return Task.FromResult(new IsTriangle
+            {
+                Message = message,
+                Triangle = triangle
+            });
+        }
+
         public override Task<Perimeter> GetTrianglePerimeter(TriangleSides request, ServerCallContext context)
         {
             PrintRunningName(MethodBase.GetCurrentMethod().Name);
@@ -40,8 +91,6 @@ namespace GrpcServer
             double p = (request.A + request.B + request.C) / 2;
             double multiplied = p * Math.Abs(p - request.A) * Math.Abs(p - request.B) * Math.Abs(p - request.C);
             double size = Math.Sqrt(multiplied);
-            //Console.WriteLine(multiplied);
-            //Console.WriteLine(size);
             return Task.FromResult(new Surface
             {
                 Size = size
