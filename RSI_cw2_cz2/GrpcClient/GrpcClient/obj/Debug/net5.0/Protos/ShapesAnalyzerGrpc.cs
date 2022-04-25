@@ -50,6 +50,8 @@ namespace GrpcClient {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcClient.Surface> __Marshaller_shapesAnalyzer_Surface = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.Surface.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::GrpcClient.Perimeter> __Marshaller_shapesAnalyzer_Perimeter = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.Perimeter.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcClient.IsRightAngle> __Marshaller_shapesAnalyzer_IsRightAngle = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.IsRightAngle.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcClient.IsIsosceles> __Marshaller_shapesAnalyzer_IsIsosceles = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.IsIsosceles.Parser));
@@ -61,6 +63,14 @@ namespace GrpcClient {
         "GetTriangleSurface",
         __Marshaller_shapesAnalyzer_TriangleSides,
         __Marshaller_shapesAnalyzer_Surface);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcClient.TriangleSides, global::GrpcClient.Perimeter> __Method_GetTrianglePerimeter = new grpc::Method<global::GrpcClient.TriangleSides, global::GrpcClient.Perimeter>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTrianglePerimeter",
+        __Marshaller_shapesAnalyzer_TriangleSides,
+        __Marshaller_shapesAnalyzer_Perimeter);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::GrpcClient.TriangleSides, global::GrpcClient.IsRightAngle> __Method_IsTriangleRightAngle = new grpc::Method<global::GrpcClient.TriangleSides, global::GrpcClient.IsRightAngle>(
@@ -130,6 +140,26 @@ namespace GrpcClient {
       public virtual grpc::AsyncUnaryCall<global::GrpcClient.Surface> GetTriangleSurfaceAsync(global::GrpcClient.TriangleSides request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTriangleSurface, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::GrpcClient.Perimeter GetTrianglePerimeter(global::GrpcClient.TriangleSides request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTrianglePerimeter(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::GrpcClient.Perimeter GetTrianglePerimeter(global::GrpcClient.TriangleSides request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTrianglePerimeter, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.Perimeter> GetTrianglePerimeterAsync(global::GrpcClient.TriangleSides request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTrianglePerimeterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.Perimeter> GetTrianglePerimeterAsync(global::GrpcClient.TriangleSides request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTrianglePerimeter, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::GrpcClient.IsRightAngle IsTriangleRightAngle(global::GrpcClient.TriangleSides request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))

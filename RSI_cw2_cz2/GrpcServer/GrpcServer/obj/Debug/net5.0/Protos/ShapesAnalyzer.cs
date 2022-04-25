@@ -26,19 +26,22 @@ namespace GrpcServer {
           string.Concat(
             "ChtQcm90b3Mvc2hhcGVzQW5hbHl6ZXIucHJvdG8SDnNoYXBlc0FuYWx5emVy",
             "IjAKDVRyaWFuZ2xlU2lkZXMSCQoBYRgBIAEoARIJCgFiGAIgASgBEgkKAWMY",
-            "AyABKAEiFwoHU3VyZmFjZRIMCgRzaXplGAEgASgBIh8KDElzUmlnaHRBbmds",
-            "ZRIPCgdtZXNzYWdlGAEgASgIIh4KC0lzSXNvc2NlbGVzEg8KB21lc3NhZ2UY",
-            "ASABKAgyhgIKDlNoYXBlc0FuYWx5emVyEkwKEkdldFRyaWFuZ2xlU3VyZmFj",
-            "ZRIdLnNoYXBlc0FuYWx5emVyLlRyaWFuZ2xlU2lkZXMaFy5zaGFwZXNBbmFs",
-            "eXplci5TdXJmYWNlElMKFElzVHJpYW5nbGVSaWdodEFuZ2xlEh0uc2hhcGVz",
-            "QW5hbHl6ZXIuVHJpYW5nbGVTaWRlcxocLnNoYXBlc0FuYWx5emVyLklzUmln",
-            "aHRBbmdsZRJRChNJc1RyaWFuZ2xlSXNvc2NlbGVzEh0uc2hhcGVzQW5hbHl6",
-            "ZXIuVHJpYW5nbGVTaWRlcxobLnNoYXBlc0FuYWx5emVyLklzSXNvc2NlbGVz",
-            "Qg2qAgpHcnBjU2VydmVyYgZwcm90bzM="));
+            "AyABKAEiFgoJUGVyaW1ldGVyEgkKAXAYASABKAEiFwoHU3VyZmFjZRIMCgRz",
+            "aXplGAEgASgBIh8KDElzUmlnaHRBbmdsZRIPCgdtZXNzYWdlGAEgASgIIh4K",
+            "C0lzSXNvc2NlbGVzEg8KB21lc3NhZ2UYASABKAgy2AIKDlNoYXBlc0FuYWx5",
+            "emVyEkwKEkdldFRyaWFuZ2xlU3VyZmFjZRIdLnNoYXBlc0FuYWx5emVyLlRy",
+            "aWFuZ2xlU2lkZXMaFy5zaGFwZXNBbmFseXplci5TdXJmYWNlElAKFEdldFRy",
+            "aWFuZ2xlUGVyaW1ldGVyEh0uc2hhcGVzQW5hbHl6ZXIuVHJpYW5nbGVTaWRl",
+            "cxoZLnNoYXBlc0FuYWx5emVyLlBlcmltZXRlchJTChRJc1RyaWFuZ2xlUmln",
+            "aHRBbmdsZRIdLnNoYXBlc0FuYWx5emVyLlRyaWFuZ2xlU2lkZXMaHC5zaGFw",
+            "ZXNBbmFseXplci5Jc1JpZ2h0QW5nbGUSUQoTSXNUcmlhbmdsZUlzb3NjZWxl",
+            "cxIdLnNoYXBlc0FuYWx5emVyLlRyaWFuZ2xlU2lkZXMaGy5zaGFwZXNBbmFs",
+            "eXplci5Jc0lzb3NjZWxlc0INqgIKR3JwY1NlcnZlcmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.TriangleSides), global::GrpcServer.TriangleSides.Parser, new[]{ "A", "B", "C" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.Perimeter), global::GrpcServer.Perimeter.Parser, new[]{ "P" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.Surface), global::GrpcServer.Surface.Parser, new[]{ "Size" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.IsRightAngle), global::GrpcServer.IsRightAngle.Parser, new[]{ "Message" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcServer.IsIsosceles), global::GrpcServer.IsIsosceles.Parser, new[]{ "Message" }, null, null, null, null)
@@ -292,6 +295,178 @@ namespace GrpcServer {
 
   }
 
+  public sealed partial class Perimeter : pb::IMessage<Perimeter>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Perimeter> _parser = new pb::MessageParser<Perimeter>(() => new Perimeter());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<Perimeter> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Perimeter() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Perimeter(Perimeter other) : this() {
+      p_ = other.p_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public Perimeter Clone() {
+      return new Perimeter(this);
+    }
+
+    /// <summary>Field number for the "p" field.</summary>
+    public const int PFieldNumber = 1;
+    private double p_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public double P {
+      get { return p_; }
+      set {
+        p_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as Perimeter);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(Perimeter other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(P, other.P)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (P != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(P);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (P != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(P);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (P != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(P);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (P != 0D) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(Perimeter other) {
+      if (other == null) {
+        return;
+      }
+      if (other.P != 0D) {
+        P = other.P;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            P = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            P = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class Surface : pb::IMessage<Surface>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -304,7 +479,7 @@ namespace GrpcServer {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[1]; }
+      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -476,7 +651,7 @@ namespace GrpcServer {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[2]; }
+      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -648,7 +823,7 @@ namespace GrpcServer {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[3]; }
+      get { return global::GrpcServer.ShapesAnalyzerReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

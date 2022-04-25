@@ -47,6 +47,8 @@ namespace GrpcClient
                     B = 3.0,
                     C = 4.0
                 };
+                var replyTrianglePerimeter = await client.GetTrianglePerimeterAsync(triangle);
+                Console.WriteLine("Triangle with sides " + triangle.ToString() + " has perimeter " + replyTrianglePerimeter.P);
                 var replyTriangleSurface = await client.GetTriangleSurfaceAsync(triangle);
                 Console.WriteLine("Triangle with sides " + triangle.ToString() + " has size " + replyTriangleSurface.Size);
                 var replayIsRight = await client.IsTriangleRightAngleAsync(triangle);

@@ -6,6 +6,7 @@ package shapesAnalyzer;
 
 service ShapesAnalyzer {
 	rpc GetTriangleSurface (TriangleSides) returns (Surface);
+	rpc GetTrianglePerimeter (TriangleSides) returns (Perimeter);
 	rpc IsTriangleRightAngle (TriangleSides) returns (IsRightAngle);
 	rpc IsTriangleIsosceles (TriangleSides) returns (IsIsosceles);
 }
@@ -14,6 +15,10 @@ message TriangleSides {
 	double a = 1;
 	double b = 2;
 	double c = 3;
+}
+
+message Perimeter {
+	double p = 1;
 }
 
 message Surface {

@@ -24,6 +24,15 @@ namespace GrpcServer
             Console.ResetColor();
             Console.WriteLine(" is running.");
         }
+        public override Task<Perimeter> GetTrianglePerimeter(TriangleSides request, ServerCallContext context)
+        {
+            PrintRunningName(MethodBase.GetCurrentMethod().Name);
+            double perimeter = request.A + request.B + request.C;
+            return Task.FromResult(new Perimeter
+            {
+                P = perimeter
+            });
+        }
 
         public override Task<Surface> GetTriangleSurface(TriangleSides request, ServerCallContext context)
         {
