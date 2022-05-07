@@ -1,0 +1,6 @@
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw4_cz1\Exercise4\WcfService1\bin\Debug\WcfService1.dll.config
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw4_cz1\Exercise4\WcfService1\bin\Debug\WcfService1.dll
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw4_cz1\Exercise4\WcfService1\bin\Debug\WcfService1.pdb
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw4_cz1\Exercise4\WcfService1\obj\Debug\WcfService1.csproj.CoreCompileInputs.cache
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw4_cz1\Exercise4\WcfService1\obj\Debug\WcfService1.dll
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw4_cz1\Exercise4\WcfService1\obj\Debug\WcfService1.pdb
