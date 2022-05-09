@@ -110,26 +110,28 @@ namespace WcfServiceClient1
             
 
             Console.WriteLine("...calling add for client1");
-            double result1 = client1.Add(-3.7, 9.5);
+            double result1 = client1.Add(200.2, 100.1);
             Console.WriteLine("Result = " + result1);
             Console.WriteLine("...calling sub for client1");
-            double result2 = client1.Sub(-3.7, 9.5);
+            double result2 = client1.Sub(200.2, 100.1);
             Console.WriteLine("Result = " + result2);
             Console.WriteLine("...calling multiply for client1");
-            double result3 = client1.Multiply(-3.7, 9.5);
+            double result3 = client1.Multiply(200.2, 300.3);
             Console.WriteLine("Result = " + result3);
             Console.WriteLine("...calling summarize for client1");
             double result4 = client1.Summarize(result1);
             Console.WriteLine("Summary = " + result4);
+            result4 = client1.Summarize(result3);
+            Console.WriteLine("Summary = " + result4);
 
             Console.WriteLine("...calling add for client2");
-            double result5 = client2.Add(-3.7, 9.5);
+            double result5 = client2.Add(200.2, 100.1);
             Console.WriteLine("Result = " + result5);
             Console.WriteLine("...calling sub for client2");
-            double result6 = client2.Sub(-3.7, 9.5);
+            double result6 = client2.Sub(200.2, 100.1);
             Console.WriteLine("Result = " + result6);
             Console.WriteLine("...calling multiply for client2");
-            double result7 = client2.Multiply(-3.7, 9.5);
+            double result7 = client2.Multiply(200.2, 300.3);
             Console.WriteLine("Result = " + result7);
             Console.WriteLine("...calling summarize for client2");
             double result8 = client2.Summarize(result7);
