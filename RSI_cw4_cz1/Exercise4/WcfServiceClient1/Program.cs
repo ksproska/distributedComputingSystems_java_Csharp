@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,10 +10,33 @@ using WcfServiceClient1.ServiceReference1;
 
 namespace WcfServiceClient1
 {
+    class MyData
+    {
+        public static void info()
+        {
+            var dateNow = DateTime.Now.ToString("yyyy'/'MM'/'dd' 'HH':'mm':'ss");
+            Console.WriteLine(dateNow);
+            Console.WriteLine("Kamila Sproska 254534");
+            Console.WriteLine(Environment.OSVersion.VersionString);
+            Console.WriteLine(Environment.UserName);
+            Console.WriteLine(Environment.Version.ToString());
+            Console.WriteLine("IPs:");
+
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    Console.WriteLine(ip.ToString());
+                }
+            }
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
+            MyData.info();
             Console.WriteLine("... The client is started");
 
             // VERSION 1
@@ -82,7 +107,7 @@ namespace WcfServiceClient1
             // VERSION 3
             CalculatorClient client1 = new CalculatorClient("WSHttpBinding_ICalculator");
             CalculatorClient client2 = new CalculatorClient("BasicHttpBinding_ICalculator");
-            // TODO: client3
+            
 
             Console.WriteLine("...calling add for client1");
             double result1 = client1.Add(-3.7, 9.5);
