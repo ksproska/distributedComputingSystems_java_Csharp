@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WcfServiceClient1.ServiceReference1;
-//using WcfServiceClient1.ServiceReference1;
 
 namespace WcfServiceClient1
 {
@@ -12,7 +7,7 @@ namespace WcfServiceClient1
     {
         static void Main(string[] args)
         {
-            var client1 = new WcfServiceClient1.ServiceReference1.ComplexCalcClient("WSHttpBinding_IComplexCalc");
+            var client1 = new ComplexCalcClient("WSHttpBinding_IComplexCalc");
             var cnum1 = new ComplexNum();
             cnum1.real = 1.2;
             cnum1.imag = 3.4;
