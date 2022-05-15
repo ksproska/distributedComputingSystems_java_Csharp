@@ -1,8 +1,18 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 using System.ServiceModel;
 
 namespace WcfServiceLibrary1
 {
+    [ServiceContract]
+    public interface IAsyncService
+    {
+        [OperationContract(IsOneWay = true)]
+        void Fun1(String s1);
+        [OperationContract]
+        void Fun2(String s2);
+    }
+
     [ServiceContract]
     public interface IComplexCalc
     {

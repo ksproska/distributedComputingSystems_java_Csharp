@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Threading;
 using WcfServiceClient1.ServiceReference1;
+using WcfServiceClient1.ServiceReference2;
 
 namespace WcfServiceClient1
 {
@@ -23,6 +25,22 @@ namespace WcfServiceClient1
             Console.ReadLine();
             client1.Close();
             Console.WriteLine("CLIENT1 - STOP");
+
+
+            Console.WriteLine("CLIENT2 – START (Async service)");
+            AsyncServiceClient client2 = new AsyncServiceClient("WSHttpBinding_IAsyncService");
+            Console.WriteLine("...calling Fun 1");
+            client2.Fun1("Client2");
+            Thread.Sleep(10);
+            Console.WriteLine("...continue after Fun 1 call");
+            Console.WriteLine("...calling Fun 2");
+            client2.Fun2("Client2");
+            Thread.Sleep(10);
+            Console.WriteLine("...continue after Fun 2 call");
+            Console.WriteLine("--> Press ENTER to continue");
+            Console.ReadLine();
+            client2.Close();
+            Console.WriteLine("CLIENT2 - STOP");
         }
     }
 }

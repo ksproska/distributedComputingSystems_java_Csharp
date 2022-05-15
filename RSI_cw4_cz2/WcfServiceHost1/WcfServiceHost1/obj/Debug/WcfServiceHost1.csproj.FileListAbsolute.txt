@@ -8,3 +8,4 @@ F:\rozproszone_systemy\RSI_cw4_cz2\WcfServiceHost1\WcfServiceHost1\obj\Debug\Wcf
 F:\rozproszone_systemy\RSI_cw4_cz2\WcfServiceHost1\WcfServiceHost1\obj\Debug\WcfServiceHost1.csproj.CopyComplete
 F:\rozproszone_systemy\RSI_cw4_cz2\WcfServiceHost1\WcfServiceHost1\obj\Debug\WcfServiceHost1.exe
 F:\rozproszone_systemy\RSI_cw4_cz2\WcfServiceHost1\WcfServiceHost1\obj\Debug\WcfServiceHost1.pdb
+F:\rozproszone_systemy\RSI_cw4_cz2\WcfServiceHost1\WcfServiceHost1\obj\Debug\WcfServiceHost1.csproj.AssemblyReference.cache
