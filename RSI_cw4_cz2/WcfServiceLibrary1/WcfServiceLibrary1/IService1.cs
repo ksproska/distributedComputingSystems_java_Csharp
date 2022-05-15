@@ -4,6 +4,24 @@ using System.ServiceModel;
 
 namespace WcfServiceLibrary1
 {
+    [ServiceContract(SessionMode = SessionMode.Required,
+               CallbackContract = typeof(ISuperCalcCallback))]
+    public interface ISuperCalc
+    {
+        [OperationContract(IsOneWay = true)]
+        void Factorial(double n);
+        [OperationContract(IsOneWay = true)]
+        void DoSomething(int sec);
+    }
+
+    public interface ISuperCalcCallback
+    {
+        [OperationContract(IsOneWay = true)]
+        void FactorialResult(double result);
+        [OperationContract(IsOneWay = true)]
+        void DoSomethingResult(string result);
+    }
+
     [ServiceContract]
     public interface IAsyncService
     {

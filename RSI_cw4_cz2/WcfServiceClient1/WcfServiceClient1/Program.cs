@@ -1,12 +1,27 @@
 ﻿using System;
+using System.ServiceModel;
 using System.Threading;
 using WcfServiceClient1.ServiceReference1;
 using WcfServiceClient1.ServiceReference2;
+using WcfServiceClient1.ServiceReference3;
 
 namespace WcfServiceClient1
 {
     class Program
     {
+        class SuperCalcCallback : ISuperCalcCallback
+        {
+            public void FactorialResult(double result)
+            {
+                //here the result is consumed 
+                Console.WriteLine(" Factorial = {0}", result);
+            }
+            public void DoSomethingResult(string info)
+            {
+                //here the result is consumed 
+                Console.WriteLine(" Calculations: {0}", info);
+            }
+        }
         static void Main(string[] args)
         {
             var client1 = new ComplexCalcClient("WSHttpBinding_IComplexCalc");
@@ -41,6 +56,27 @@ namespace WcfServiceClient1
             Console.ReadLine();
             client2.Close();
             Console.WriteLine("CLIENT2 - STOP");
+
+
+            Console.WriteLine("\nCLIENT3 – START (Callbacks):");
+            SuperCalcCallback myCbBHandler = new SuperCalcCallback();
+            InstanceContext instanceContext = new InstanceContext(myCbBHandler);
+            SuperCalcClient client3 = new SuperCalcClient(instanceContext);
+            double value1 = 10;
+            Console.WriteLine("...call of Factorial({0})...", value1);
+            client3.Factorial(value1);
+            int value2 = 5;
+            Console.WriteLine("...call of DoSomething...");
+            client3.DoSomething(value2);
+            value1 = 20;
+            Console.WriteLine("...call of Factorial({0})...", value1);
+            client3.Factorial(value1);
+            Console.WriteLine("--> Client must wait for the results");
+            Console.WriteLine("--> Press ENTER after receiving ALL results"); 
+          
+            Console.ReadLine();
+            client3.Close();
+            Console.WriteLine("CLIENT3 - STOP");
         }
     }
 }
