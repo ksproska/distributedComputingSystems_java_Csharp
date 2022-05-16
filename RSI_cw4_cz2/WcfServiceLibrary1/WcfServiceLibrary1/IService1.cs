@@ -31,7 +31,7 @@ namespace WcfServiceLibrary1
         void Fun2(String s2);
     }
 
-    [ServiceContract]
+    [ServiceContract(ProtectionLevel = System.Net.Security.ProtectionLevel.None)]
     public interface IComplexCalc
     {
         [OperationContract]

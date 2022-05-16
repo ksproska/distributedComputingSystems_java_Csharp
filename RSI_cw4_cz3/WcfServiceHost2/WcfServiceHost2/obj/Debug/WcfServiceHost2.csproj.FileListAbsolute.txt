@@ -1,0 +1,11 @@
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceHost2\WcfServiceHost2\obj\Debug\WcfServiceHost2.csproj.AssemblyReference.cache
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceHost2\WcfServiceHost2\obj\Debug\WcfServiceHost2.csproj.CoreCompileInputs.cache
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceHost2\WcfServiceHost2\bin\Debug\WcfServiceHost2.exe.config
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceHost2\WcfServiceHost2\bin\Debug\WcfServiceHost2.exe
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceHost2\WcfServiceHost2\bin\Debug\WcfServiceHost2.pdb
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceHost2\WcfServiceHost2\bin\Debug\WcfServiceLibrary2.pdb
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceHost2\WcfServiceHost2\bin\Debug\WcfServiceLibrary2.dll.config
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceHost2\WcfServiceHost2\obj\Debug\WcfServiceHost2.csproj.CopyComplete
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceHost2\WcfServiceHost2\obj\Debug\WcfServiceHost2.exe
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceHost2\WcfServiceHost2\obj\Debug\WcfServiceHost2.pdb
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceHost2\WcfServiceHost2\bin\Debug\WcfServiceLibrary2.dll

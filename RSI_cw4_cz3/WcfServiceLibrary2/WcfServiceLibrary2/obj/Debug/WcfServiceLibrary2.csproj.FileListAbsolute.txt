@@ -1,0 +1,6 @@
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceLibrary2\WcfServiceLibrary2\bin\Debug\WcfServiceLibrary2.dll.config
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceLibrary2\WcfServiceLibrary2\bin\Debug\WcfServiceLibrary2.dll
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceLibrary2\WcfServiceLibrary2\bin\Debug\WcfServiceLibrary2.pdb
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceLibrary2\WcfServiceLibrary2\obj\Debug\WcfServiceLibrary2.csproj.CoreCompileInputs.cache
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceLibrary2\WcfServiceLibrary2\obj\Debug\WcfServiceLibrary2.dll
+F:\rozproszone_systemy\RSI_cw4_cz3\WcfServiceLibrary2\WcfServiceLibrary2\obj\Debug\WcfServiceLibrary2.pdb
