@@ -1,0 +1,6 @@
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\bin\MyWebService.dll.config
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\bin\MyWebService.dll
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\bin\MyWebService.pdb
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebService.csproj.CoreCompileInputs.cache
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebService.dll
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebService.pdb
