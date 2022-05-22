@@ -4,3 +4,10 @@ C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebSe
 C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebService.csproj.CoreCompileInputs.cache
 C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebService.dll
 C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebService.pdb
+F:\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\bin\MyWebService.dll.config
+F:\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\bin\MyWebService.dll
+F:\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\bin\MyWebService.pdb
+F:\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebService.csproj.AssemblyReference.cache
+F:\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebService.csproj.CoreCompileInputs.cache
+F:\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebService.dll
+F:\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebService.pdb
