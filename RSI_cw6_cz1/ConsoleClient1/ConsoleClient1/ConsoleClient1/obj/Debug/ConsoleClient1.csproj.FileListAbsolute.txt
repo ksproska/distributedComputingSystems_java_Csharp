@@ -1,0 +1,7 @@
+F:\rozproszone_systemy\RSI_cw6_cz1\ConsoleClient1\ConsoleClient1\ConsoleClient1\bin\Debug\ConsoleClient1.exe.config
+F:\rozproszone_systemy\RSI_cw6_cz1\ConsoleClient1\ConsoleClient1\ConsoleClient1\bin\Debug\ConsoleClient1.exe
+F:\rozproszone_systemy\RSI_cw6_cz1\ConsoleClient1\ConsoleClient1\ConsoleClient1\bin\Debug\ConsoleClient1.pdb
+F:\rozproszone_systemy\RSI_cw6_cz1\ConsoleClient1\ConsoleClient1\ConsoleClient1\obj\Debug\ConsoleClient1.csproj.AssemblyReference.cache
+F:\rozproszone_systemy\RSI_cw6_cz1\ConsoleClient1\ConsoleClient1\ConsoleClient1\obj\Debug\ConsoleClient1.csproj.CoreCompileInputs.cache
+F:\rozproszone_systemy\RSI_cw6_cz1\ConsoleClient1\ConsoleClient1\ConsoleClient1\obj\Debug\ConsoleClient1.exe
+F:\rozproszone_systemy\RSI_cw6_cz1\ConsoleClient1\ConsoleClient1\ConsoleClient1\obj\Debug\ConsoleClient1.pdb
