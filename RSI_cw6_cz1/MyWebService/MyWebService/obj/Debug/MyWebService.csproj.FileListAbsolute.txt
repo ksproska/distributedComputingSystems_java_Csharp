@@ -11,3 +11,4 @@ F:\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebServ
 F:\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebService.csproj.CoreCompileInputs.cache
 F:\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebService.dll
 F:\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebService.pdb
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw6_cz1\MyWebService\MyWebService\obj\Debug\MyWebService.csproj.AssemblyReference.cache

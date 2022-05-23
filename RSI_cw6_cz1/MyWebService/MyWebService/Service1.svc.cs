@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
@@ -12,9 +11,9 @@ namespace MyWebService
     public class Service1 : IRestService
     {
         private static List<Book> books_list = new List<Book>() {
-            new Book {Id = 100, Title = "Dziady", Price = 32.55},
-            new Book {Id = 101, Title = "Potop", Price = 15.00},
-            new Book {Id = 102, Title = "Balladyna", Price = 42.90}
+            new Book {Id = 100, Title = "Echoman", Price = 32.55},
+            new Book {Id = 101, Title = "Ekstradycja", Price = 15.00},
+            new Book {Id = 102, Title = "Project Riese", Price = 42.90}
         };
 
         public string addXml(Book item)
@@ -30,7 +29,7 @@ namespace MyWebService
                 return "Added item with ID=" + item.Id;
             }
             else
-                throw new WebFaultException<string>("409: Conflict", System.Net.HttpStatusCode.Conflict);
+                return "Id already exists ID=" + item.Id;
         }
 
         public string deleteXml(string Id)
@@ -38,7 +37,7 @@ namespace MyWebService
             int intId = int.Parse(Id);
             int idx = books_list.FindIndex(b => b.Id == intId);
             if (idx == -1)
-                throw new WebFaultException<string>("404: Not Found", System.Net.HttpStatusCode.NotFound);
+                return "No book with ID=" + Id;
             books_list.RemoveAt(idx);
             return "Removed item with ID=" + Id;
         }
@@ -53,7 +52,7 @@ namespace MyWebService
             int intId = int.Parse(Id);
             int idx = books_list.FindIndex(b => b.Id == intId);
             if (idx == -1)
-                throw new WebFaultException<string>("404: Not Found", System.Net.HttpStatusCode.NotFound);
+                return null;
             return books_list.ElementAt(idx);
         }
 
