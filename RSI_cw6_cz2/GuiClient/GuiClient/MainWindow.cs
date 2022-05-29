@@ -10,22 +10,22 @@ using System.Windows.Forms;
 
 namespace GuiClient
 {
-    public partial class Form1 : Form
+    public partial class MainWindow : Form
     {
         
-        public Form1()
+        public MainWindow()
         {
             InitializeComponent();
-            button2.Enabled = false;
-            button3.Enabled = false;
+            buttonDelete.Enabled = false;
+            buttonUpdate.Enabled = false;
             try
             {
-                textBox1.Text = WtfClient.getPrettyNames();
+                textBoxTitle.Text = Movie.getTitles();
                 updateItems();
             }
             catch (System.Net.WebException ex)
             {
-                textBox1.Text = "Server not working!";
+                textBoxTitle.Text = "Server not working!";
                 //textBox1.Text = ex.ToString();
             }
         }
@@ -54,7 +54,7 @@ namespace GuiClient
                     maxId = casted.Id;
                 }
             }
-            AddItem form = new AddItem(maxId + 1);
+            AddOrModifyItem form = new AddOrModifyItem(maxId + 1);
             form.ShowDialog(this);
             updateItems();
         }
@@ -63,8 +63,8 @@ namespace GuiClient
         {
             WtfClient.deleteId(((Movie)listBox1.SelectedItem).Id);
             updateItems();
-            button2.Enabled = false;
-            button3.Enabled = false;
+            buttonDelete.Enabled = false;
+            buttonUpdate.Enabled = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -74,17 +74,17 @@ namespace GuiClient
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            button2.Enabled = listBox1.SelectedIndex != -1;
-            button3.Enabled = listBox1.SelectedIndex != -1;
+            buttonDelete.Enabled = listBox1.SelectedIndex != -1;
+            buttonUpdate.Enabled = listBox1.SelectedIndex != -1;
         }
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            AddItem form = new AddItem((Movie) listBox1.SelectedItem);
+            AddOrModifyItem form = new AddOrModifyItem((Movie) listBox1.SelectedItem);
             form.ShowDialog(this);
             updateItems();
-            button2.Enabled = false;
-            button3.Enabled = false;
+            buttonDelete.Enabled = false;
+            buttonUpdate.Enabled = false;
         }
     }
 }

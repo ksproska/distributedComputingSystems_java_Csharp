@@ -35,6 +35,16 @@ namespace GuiClient
             }
             return toReturn;
         }
+
+        public static string getTitles()
+        {
+            var toReturn = "";
+            foreach (var item in new List<string> { "Id", "Title", "Director", "Length" })
+            {
+                toReturn += item.PadRight(WtfClient.padding);
+            }
+            return toReturn;
+        }
     }
     class WtfClient
     {
@@ -91,18 +101,6 @@ namespace GuiClient
             responseStream.Close();
             resp.Close();
             return responseString;
-        }
-
-        public static string getPrettyNames()
-        {
-            var inputJson = getAllCurrentItems();
-            var dt = JsonConvert.DeserializeObject<DataTable>(inputJson);
-            var toReturn = "";
-            foreach (DataColumn c in dt.Rows[0].Table.Columns)
-            {
-                toReturn += c.ColumnName.ToString().PadRight(padding);
-            }
-            return toReturn;
         }
 
         public static List<Movie> getItems()
