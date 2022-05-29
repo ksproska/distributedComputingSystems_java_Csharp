@@ -13,7 +13,7 @@ namespace GuiClient
     class WtfClient
     {
         private static string baseWebHttp = "http://localhost:61905/MoviesService.svc/json/movies";
-        private static int padding = 30;
+        private static int padding = 20;
         public static string getAllCurrentItems()
         {
             HttpWebRequest req = WebRequest.Create(baseWebHttp) as HttpWebRequest;

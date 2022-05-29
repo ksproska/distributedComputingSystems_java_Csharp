@@ -57,6 +57,7 @@ namespace GuiClient
             var selectedIdInt = int.Parse(selectedId);
             WtfClient.deleteId(selectedIdInt);
             updateItems();
+            button2.Enabled = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

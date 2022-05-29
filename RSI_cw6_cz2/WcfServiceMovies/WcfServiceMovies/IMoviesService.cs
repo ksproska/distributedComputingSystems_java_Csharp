@@ -53,6 +53,9 @@ namespace WcfServiceMovies
         public string Title { get; set; }
 
         [DataMember(Order = 2)]
-        public double Price { get; set; }
+        public int Length { get; set; }
+
+        [DataMember(Order = 2)]
+        public string Director { get; set; }
     }
 }

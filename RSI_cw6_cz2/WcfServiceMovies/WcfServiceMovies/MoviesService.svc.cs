@@ -12,9 +12,9 @@ namespace WcfServiceMovies
     public class MoviesService : IMoviesService
     {
         private static List<Movie> movies_list = new List<Movie>() {
-            new Movie {Id = 100, Title = "Echoman", Price = 32.55},
-            new Movie {Id = 101, Title = "Ekstradycja", Price = 15.00},
-            new Movie {Id = 102, Title = "Project Riese", Price = 42.90}
+            new Movie {Id = 100, Title = "Echoman", Length = 90, Director = "Name1"},
+            new Movie {Id = 101, Title = "Ekstradycja", Length = 90, Director = "Name1"},
+            new Movie {Id = 102, Title = "Project Riese", Length = 90, Director = "Name1"}
         };
 
         public string addXml(Movie item)
