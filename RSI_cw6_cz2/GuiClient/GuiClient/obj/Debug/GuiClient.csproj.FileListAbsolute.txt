@@ -1,0 +1,13 @@
+F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\bin\Debug\GuiClient.exe.config
+F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\bin\Debug\GuiClient.exe
+F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\bin\Debug\GuiClient.pdb
+F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\obj\Debug\GuiClient.csproj.AssemblyReference.cache
+F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\obj\Debug\GuiClient.Form1.resources
+F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\obj\Debug\GuiClient.Properties.Resources.resources
+F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\obj\Debug\GuiClient.csproj.GenerateResource.cache
+F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\obj\Debug\GuiClient.csproj.CoreCompileInputs.cache
+F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\obj\Debug\GuiClient.exe
+F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\obj\Debug\GuiClient.pdb
+F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\bin\Debug\Newtonsoft.Json.dll
+F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\bin\Debug\Newtonsoft.Json.xml
+F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\obj\Debug\GuiClient.csproj.CopyComplete
