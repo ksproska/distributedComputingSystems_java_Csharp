@@ -40,7 +40,7 @@ namespace GuiClient
             // 
             // textBoxTitle
             // 
-            this.textBoxTitle.Location = new System.Drawing.Point(209, 97);
+            this.textBoxTitle.Location = new System.Drawing.Point(68, 26);
             this.textBoxTitle.Name = "textBoxTitle";
             this.textBoxTitle.Size = new System.Drawing.Size(359, 20);
             this.textBoxTitle.TabIndex = 0;
@@ -48,7 +48,7 @@ namespace GuiClient
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(209, 145);
+            this.textBox2.Location = new System.Drawing.Point(68, 74);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(359, 20);
             this.textBox2.TabIndex = 2;
@@ -56,7 +56,7 @@ namespace GuiClient
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(209, 191);
+            this.textBox3.Location = new System.Drawing.Point(68, 119);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(359, 20);
             this.textBox3.TabIndex = 3;
@@ -64,7 +64,7 @@ namespace GuiClient
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(353, 356);
+            this.button2.Location = new System.Drawing.Point(188, 163);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
@@ -75,35 +75,38 @@ namespace GuiClient
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(373, 81);
+            this.label1.Location = new System.Drawing.Point(12, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Title";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(360, 129);
+            this.label2.Location = new System.Drawing.Point(10, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Length";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(373, 175);
+            this.label3.Location = new System.Drawing.Point(10, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Director";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // AddOrModifyItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(446, 209);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -112,7 +115,7 @@ namespace GuiClient
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBoxTitle);
             this.Name = "AddOrModifyItem";
-            this.Text = "AddItem";
+            this.Text = "Enter changes";
             this.Load += new System.EventHandler(this.AddItem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

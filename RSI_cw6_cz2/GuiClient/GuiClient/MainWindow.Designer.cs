@@ -38,7 +38,7 @@ namespace GuiClient
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(642, 39);
+            this.buttonAdd.Location = new System.Drawing.Point(801, 39);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(63, 41);
             this.buttonAdd.TabIndex = 0;
@@ -48,7 +48,7 @@ namespace GuiClient
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(642, 86);
+            this.buttonDelete.Location = new System.Drawing.Point(801, 86);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(63, 41);
             this.buttonDelete.TabIndex = 1;
@@ -61,7 +61,7 @@ namespace GuiClient
             this.textBoxTitle.Font = new System.Drawing.Font("Monospac821 BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.textBoxTitle.Location = new System.Drawing.Point(12, 12);
             this.textBoxTitle.Name = "textBoxTitle";
-            this.textBoxTitle.Size = new System.Drawing.Size(613, 21);
+            this.textBoxTitle.Size = new System.Drawing.Size(775, 21);
             this.textBoxTitle.TabIndex = 2;
             this.textBoxTitle.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -72,14 +72,14 @@ namespace GuiClient
             this.listBox1.ItemHeight = 14;
             this.listBox1.Location = new System.Drawing.Point(12, 39);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(613, 494);
+            this.listBox1.Size = new System.Drawing.Size(775, 396);
             this.listBox1.TabIndex = 3;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListBox1_MouseDoubleClick);
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(642, 133);
+            this.buttonUpdate.Location = new System.Drawing.Point(801, 133);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(63, 41);
             this.buttonUpdate.TabIndex = 4;
@@ -91,7 +91,7 @@ namespace GuiClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(715, 542);
+            this.ClientSize = new System.Drawing.Size(876, 451);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBoxTitle);
