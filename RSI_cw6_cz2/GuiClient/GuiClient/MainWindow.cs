@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Windows.UI.Xaml;
 
 namespace GuiClient
 {
@@ -70,6 +71,19 @@ namespace GuiClient
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ListBox1_MouseDoubleClick(object sender, EventArgs e)
+        {
+            var selectedMovie = (Movie)listBox1.SelectedItem;
+            if (selectedMovie != null)
+            {
+                AddOrModifyItem form = new AddOrModifyItem(selectedMovie);
+                form.ShowDialog(this);
+                updateItems();
+                buttonDelete.Enabled = false;
+                buttonUpdate.Enabled = false;
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

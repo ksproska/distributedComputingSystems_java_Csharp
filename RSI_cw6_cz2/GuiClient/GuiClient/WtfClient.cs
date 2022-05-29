@@ -21,6 +21,7 @@ namespace GuiClient
     }
     public class Movie
     {
+        private static int IdPadding = 5;
         public int Id { get; set; }
         public string Title { get; set; }
         public int Length { get; set; }
@@ -28,8 +29,8 @@ namespace GuiClient
 
         public override string ToString()
         {
-            var toReturn = "";
-            foreach(var item in new List<Object> { Id, Title, Director, Length })
+            var toReturn = Id.ToString().PadRight(IdPadding);
+            foreach(var item in new List<Object> { Title, Director, Length })
             {
                 toReturn += item.ToString().PadRight(WtfClient.padding);
             }
@@ -38,8 +39,8 @@ namespace GuiClient
 
         public static string getTitles()
         {
-            var toReturn = "";
-            foreach (var item in new List<string> { "Id", "Title", "Director", "Length" })
+            var toReturn = "Id".PadRight(IdPadding);
+            foreach (var item in new List<string> { "Title", "Director", "Length" })
             {
                 toReturn += item.PadRight(WtfClient.padding);
             }
@@ -49,7 +50,7 @@ namespace GuiClient
     class WtfClient
     {
         private static string baseWebHttp = "http://localhost:61905/MoviesService.svc/json/movies";
-        public static int padding = 20;
+        public static int padding = 30;
         public static string getAllCurrentItems()
         {
             HttpWebRequest req = WebRequest.Create(baseWebHttp) as HttpWebRequest;

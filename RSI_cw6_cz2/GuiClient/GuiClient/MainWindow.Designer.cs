@@ -38,9 +38,9 @@ namespace GuiClient
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(646, 39);
+            this.buttonAdd.Location = new System.Drawing.Point(642, 39);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(131, 41);
+            this.buttonAdd.Size = new System.Drawing.Size(63, 41);
             this.buttonAdd.TabIndex = 0;
             this.buttonAdd.Text = "Add";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -48,9 +48,9 @@ namespace GuiClient
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(646, 86);
+            this.buttonDelete.Location = new System.Drawing.Point(642, 86);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(131, 41);
+            this.buttonDelete.Size = new System.Drawing.Size(63, 41);
             this.buttonDelete.TabIndex = 1;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -75,12 +75,13 @@ namespace GuiClient
             this.listBox1.Size = new System.Drawing.Size(613, 494);
             this.listBox1.TabIndex = 3;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListBox1_MouseDoubleClick);
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(646, 133);
+            this.buttonUpdate.Location = new System.Drawing.Point(642, 133);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(131, 41);
+            this.buttonUpdate.Size = new System.Drawing.Size(63, 41);
             this.buttonUpdate.TabIndex = 4;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = true;
@@ -90,7 +91,7 @@ namespace GuiClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 542);
+            this.ClientSize = new System.Drawing.Size(715, 542);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBoxTitle);

@@ -12,9 +12,10 @@ namespace WcfServiceMovies
     public class MoviesService : IMoviesService
     {
         private static List<Movie> movies_list = new List<Movie>() {
-            new Movie {Id = 100, Title = "Echoman", Length = 90, Director = "Name1"},
-            new Movie {Id = 101, Title = "Ekstradycja", Length = 90, Director = "Name1"},
-            new Movie {Id = 102, Title = "Project Riese", Length = 90, Director = "Name1"}
+            new Movie {Id = 100, Title = "What we do int the shadows", Length = 116, Director = "Taika Waititi"},
+            new Movie {Id = 101, Title = "But I'm a Cheerleader", Length = 197, Director = "Jamie Babbit"},
+            new Movie {Id = 102, Title = "Promising Young Woman", Length = 173, Director = "Emerald Fennell"},
+            new Movie {Id = 102, Title = "Happiest season", Length = 173, Director = "Clea DuVall"}
         };
 
         public string addXml(Movie item)
@@ -27,6 +28,7 @@ namespace WcfServiceMovies
             {
                 item.Id = newIdx;
                 movies_list.Add(item);
+                movies_list = movies_list.OrderBy(x => x.Id).ToList();
                 return "Added item with ID=" + item.Id;
             }
             else
