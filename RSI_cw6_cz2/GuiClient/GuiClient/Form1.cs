@@ -17,6 +17,7 @@ namespace GuiClient
         {
             InitializeComponent();
             button2.Enabled = false;
+            button3.Enabled = false;
             try
             {
                 textBox1.Text = WtfClient.getPrettyNames();
@@ -45,19 +46,25 @@ namespace GuiClient
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AddItem form = new AddItem();
-            //form.Show(); // or
+            var maxId = 0;
+            foreach(var item in listBox1.Items) {
+                var casted = (Movie)item;
+                if(maxId < casted.Id)
+                {
+                    maxId = casted.Id;
+                }
+            }
+            AddItem form = new AddItem(maxId + 1);
             form.ShowDialog(this);
+            updateItems();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var selectedItem = listBox1.SelectedItem.ToString();
-            var selectedId = selectedItem.Split(' ')[0];
-            var selectedIdInt = int.Parse(selectedId);
-            WtfClient.deleteId(selectedIdInt);
+            WtfClient.deleteId(((Movie)listBox1.SelectedItem).Id);
             updateItems();
             button2.Enabled = false;
+            button3.Enabled = false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -68,6 +75,16 @@ namespace GuiClient
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             button2.Enabled = listBox1.SelectedIndex != -1;
+            button3.Enabled = listBox1.SelectedIndex != -1;
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            AddItem form = new AddItem((Movie) listBox1.SelectedItem);
+            form.ShowDialog(this);
+            updateItems();
+            button2.Enabled = false;
+            button3.Enabled = false;
         }
     }
 }

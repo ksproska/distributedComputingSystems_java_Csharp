@@ -11,3 +11,4 @@ F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\obj\Debug\GuiClient.pdb
 F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\bin\Debug\Newtonsoft.Json.dll
 F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\bin\Debug\Newtonsoft.Json.xml
 F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\obj\Debug\GuiClient.csproj.CopyComplete
+F:\rozproszone_systemy\RSI_cw6_cz2\GuiClient\GuiClient\obj\Debug\GuiClient.AddItem.resources
