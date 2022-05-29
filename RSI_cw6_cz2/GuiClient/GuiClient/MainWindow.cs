@@ -100,5 +100,10 @@ namespace GuiClient
             buttonDelete.Enabled = false;
             buttonUpdate.Enabled = false;
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show(MyData.info());
+        }
     }
 }
