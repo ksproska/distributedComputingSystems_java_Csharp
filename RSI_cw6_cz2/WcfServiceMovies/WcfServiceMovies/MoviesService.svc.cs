@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
@@ -8,6 +10,32 @@ using System.Text;
 
 namespace WcfServiceMovies
 {
+    class MyData
+    {
+        public static string info()
+        {
+            var toReturn = "";
+            var dateNow = DateTime.Now.ToString("yyyy'/'MM'/'dd' 'HH':'mm':'ss");
+            toReturn += dateNow + "\n";
+            toReturn += "Kamila Sproska 254534" + "\n";
+            toReturn += "Marta Kuchciak 254568" + "\n";
+            toReturn += Environment.OSVersion.VersionString + "\n";
+            toReturn += Environment.UserName + "\n";
+            toReturn += Environment.Version.ToString() + "\n";
+            toReturn += "IPs:" + "\n";
+
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    toReturn += ip.ToString() + "\n";
+                }
+            }
+            return toReturn;
+        }
+    }
+
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class MoviesService : IMoviesService
     {
@@ -15,7 +43,7 @@ namespace WcfServiceMovies
             new Movie {Id = 100, Title = "What we do int the shadows", Length = 116, Director = "Taika Waititi"},
             new Movie {Id = 101, Title = "But I'm a Cheerleader", Length = 197, Director = "Jamie Babbit"},
             new Movie {Id = 102, Title = "Promising Young Woman", Length = 173, Director = "Emerald Fennell"},
-            new Movie {Id = 102, Title = "Happiest season", Length = 173, Director = "Clea DuVall"}
+            new Movie {Id = 103, Title = "Happiest season", Length = 153, Director = "Clea DuVall"}
         };
 
         public string addXml(Movie item)
@@ -57,6 +85,12 @@ namespace WcfServiceMovies
             if (idx == -1)
                 return null;
             return movies_list.ElementAt(idx);
+        }
+
+        public DataString getMyData()
+        {
+            string data = MyData.info();
+            return new DataString() { description = data };
         }
 
         string IMoviesService.addJson(Movie item)

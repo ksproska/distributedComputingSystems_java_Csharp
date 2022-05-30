@@ -40,6 +40,10 @@ namespace WcfServiceMovies
         [OperationContract]
         [WebInvoke(UriTemplate = "/json/movies/{id}", Method = "DELETE", ResponseFormat = WebMessageFormat.Json)] //"Xxx{id}"
         string deleteJson(string Id);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/mydata", ResponseFormat = WebMessageFormat.Json)]
+        DataString getMyData();
     }
 
     // Zdefiniuj kontrakt danych
@@ -57,5 +61,13 @@ namespace WcfServiceMovies
 
         [DataMember(Order = 2)]
         public string Director { get; set; }
+    }
+
+    [DataContract]
+    public class DataString
+    {
+        [DataMember(Order = 0)]
+        public string description { get; set; }
+
     }
 }

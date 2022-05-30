@@ -1,7 +1,0 @@
-F:\rozproszone_systemy\RSI_cw6_cz2\WcfServiceMovies\WcfServiceMovies\bin\WcfServiceMovies.dll.config
-F:\rozproszone_systemy\RSI_cw6_cz2\WcfServiceMovies\WcfServiceMovies\bin\WcfServiceMovies.dll
-F:\rozproszone_systemy\RSI_cw6_cz2\WcfServiceMovies\WcfServiceMovies\bin\WcfServiceMovies.pdb
-F:\rozproszone_systemy\RSI_cw6_cz2\WcfServiceMovies\WcfServiceMovies\obj\Debug\WcfServiceMovies.csproj.AssemblyReference.cache
-F:\rozproszone_systemy\RSI_cw6_cz2\WcfServiceMovies\WcfServiceMovies\obj\Debug\WcfServiceMovies.csproj.CoreCompileInputs.cache
-F:\rozproszone_systemy\RSI_cw6_cz2\WcfServiceMovies\WcfServiceMovies\obj\Debug\WcfServiceMovies.dll
-F:\rozproszone_systemy\RSI_cw6_cz2\WcfServiceMovies\WcfServiceMovies\obj\Debug\WcfServiceMovies.pdb

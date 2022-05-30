@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -49,8 +50,31 @@ namespace GuiClient
     }
     class WtfClient
     {
-        private static string baseWebHttp = "http://localhost:61905/MoviesService.svc/json/movies";
+        /*private static string baseWebHttp = "http://localhost:61905/MoviesService.svc/json/movies";
+        private static string dataWebHttp = "http://localhost:61905/MoviesService.svc/mydata";*/
+        private static string baseWebHttp = "http://zpi04.solidcp.ii.pwr.edu.pl/MoviesService.svc/json/movies";
+        private static string dataWebHttp = "http://zpi04.solidcp.ii.pwr.edu.pl/MoviesService.svc/mydata";
+
         public static int padding = 30;
+        public static string getMyData()
+        {
+            HttpWebRequest req = WebRequest.Create(dataWebHttp) as HttpWebRequest;
+            req.KeepAlive = false;
+            req.ContentType = "application/json";
+            HttpWebResponse resp = req.GetResponse() as HttpWebResponse;
+            //przekodowanie tekstu odpowiedzi: 
+            Encoding enc = System.Text.Encoding.GetEncoding(1252);
+            StreamReader responseStream = new StreamReader(resp.GetResponseStream(), enc);
+            string responseString = responseStream.ReadToEnd();
+            responseStream.Close();
+
+            resp.Close();
+
+            dynamic stuff1 = Newtonsoft.Json.JsonConvert.DeserializeObject(responseString);
+            return stuff1["description"];
+
+            return responseString;
+        }
         public static string getAllCurrentItems()
         {
             HttpWebRequest req = WebRequest.Create(baseWebHttp) as HttpWebRequest;
