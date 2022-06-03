@@ -1,0 +1,7 @@
+F:\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\bin\WcfServiceLibrary.dll.config
+F:\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\bin\WcfServiceLibrary.dll
+F:\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\bin\WcfServiceLibrary.pdb
+F:\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\obj\Debug\WcfServiceLibrary.csproj.AssemblyReference.cache
+F:\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\obj\Debug\WcfServiceLibrary.csproj.CoreCompileInputs.cache
+F:\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\obj\Debug\WcfServiceLibrary.dll
+F:\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\obj\Debug\WcfServiceLibrary.pdb

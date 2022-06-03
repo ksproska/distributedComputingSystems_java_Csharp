@@ -30,7 +30,7 @@ namespace WebClientMVC.Controllers
 
     public class WcfClient
     {
-        private static string baseWebHttp = "http://localhost:61905/MoviesService.svc/json/movies";
+        private static string baseWebHttp = "http://localhost:52680/Service1.svc/json/movies";
         public static string getAllCurrentItems()
         {
             HttpWebRequest req = WebRequest.Create(baseWebHttp) as HttpWebRequest;

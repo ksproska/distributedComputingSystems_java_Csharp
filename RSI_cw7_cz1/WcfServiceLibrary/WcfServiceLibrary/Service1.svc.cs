@@ -8,8 +8,10 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace WcfServiceMovies
+namespace WcfServiceLibrary
 {
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service1" in code, svc and config file together.
+    // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     class MyData
     {
         public static string info()
@@ -36,8 +38,7 @@ namespace WcfServiceMovies
         }
     }
 
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
-    public class MoviesService : IMoviesService
+    public class Service1 : ILibraryService
     {
         private static List<Movie> movies_list = new List<Movie>() {
             new Movie {Id = 100, Title = "What we do int the shadows", Length = 116, Director = "Taika Waititi"},
@@ -93,22 +94,22 @@ namespace WcfServiceMovies
             return new DataString() { description = data };
         }
 
-        string IMoviesService.addJson(Movie item)
+        string ILibraryService.addJson(Movie item)
         {
             return addXml(item);
         }
 
-        string IMoviesService.deleteJson(string Id)
+        string ILibraryService.deleteJson(string Id)
         {
             return deleteXml(Id);
         }
 
-        List<Movie> IMoviesService.getAllJson()
+        List<Movie> ILibraryService.getAllJson()
         {
             return getAllXml();
         }
 
-        Movie IMoviesService.getByIdJson(string Id)
+        Movie ILibraryService.getByIdJson(string Id)
         {
             return getByIdXml(Id);
         }
