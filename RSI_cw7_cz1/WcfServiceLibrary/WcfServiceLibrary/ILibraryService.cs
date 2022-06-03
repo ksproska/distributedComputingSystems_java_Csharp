@@ -15,35 +15,39 @@ namespace WcfServiceLibrary
 
         [OperationContract]
         [WebGet(UriTemplate = "/movies")]
-        List<Movie> getAllXml();
+        List<Movie> getAllMoviesXml();
 
         [OperationContract]
         [WebGet(UriTemplate = "/json/movies", ResponseFormat = WebMessageFormat.Json)]
-        List<Movie> getAllJson();
+        List<Movie> getAllMoviesJson();
 
         [OperationContract]
         [WebGet(UriTemplate = "/movies/{id}", ResponseFormat = WebMessageFormat.Xml)]
-        Movie getByIdXml(string Id);
+        Movie getByIdMoviesXml(string Id);
 
         [OperationContract]
         [WebGet(UriTemplate = "/json/movies/{id}", ResponseFormat = WebMessageFormat.Json)]
-        Movie getByIdJson(string Id);
+        Movie getByIdMoviesJson(string Id);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/json/movies/next/{id}", ResponseFormat = WebMessageFormat.Json)]
+        Movie getByIdNextMovieJson(string Id);
 
         [OperationContract]
         [WebInvoke(UriTemplate = "/movies", Method = "POST", ResponseFormat = WebMessageFormat.Xml)]
-        string addXml(Movie item);
+        string addMoviesXml(Movie item);
 
         [OperationContract]
         [WebInvoke(UriTemplate = "/json/movies", Method = "POST", ResponseFormat = WebMessageFormat.Json)]
-        string addJson(Movie item);
+        string addMovieJson(Movie item);
 
         [OperationContract]
         [WebInvoke(UriTemplate = "/movies/{id}", Method = "DELETE")] //"Xxx{id}"
-        string deleteXml(string Id);
+        string deleteMovieXml(string Id);
 
         [OperationContract]
         [WebInvoke(UriTemplate = "/json/movies/{id}", Method = "DELETE", ResponseFormat = WebMessageFormat.Json)] //"Xxx{id}"
-        string deleteJson(string Id);
+        string deleteMovieJson(string Id);
 
         [OperationContract]
         [WebGet(UriTemplate = "/mydata", ResponseFormat = WebMessageFormat.Json)]
@@ -65,6 +69,41 @@ namespace WcfServiceLibrary
 
         [DataMember(Order = 2)]
         public string Director { get; set; }
+    }
+
+    [DataContract]
+    public class Book
+    {
+        [DataMember(Order = 0)]
+        public int Id { get; set; }
+
+        [DataMember(Order = 1)]
+        public string Title { get; set; }
+
+        [DataMember(Order = 2)]
+        public string Genre { get; set; }
+
+        [DataMember(Order = 3)]
+        public string Author { get; set; }
+    }
+
+    [DataContract]
+    public class Music
+    {
+        [DataMember(Order = 0)]
+        public int Id { get; set; }
+
+        [DataMember(Order = 1)]
+        public string Title { get; set; }
+
+        [DataMember(Order = 2)]
+        public string Genre { get; set; }
+
+        [DataMember(Order = 3)]
+        public string Author { get; set; }
+
+        [DataMember(Order = 4)]
+        public float Length { get; set; }
     }
 
     [DataContract]

@@ -47,7 +47,7 @@ namespace WcfServiceLibrary
             new Movie {Id = 103, Title = "Happiest season", Length = 153, Director = "Clea DuVall"}
         };
 
-        public string addXml(Movie item)
+        public string addMoviesXml(Movie item)
         {
             if (item == null)
                 throw new WebFaultException<string>("400: Bad Request", System.Net.HttpStatusCode.BadRequest);
@@ -64,7 +64,7 @@ namespace WcfServiceLibrary
                 return "Id already exists ID=" + item.Id;
         }
 
-        public string deleteXml(string Id)
+        public string deleteMovieXml(string Id)
         {
             int intId = int.Parse(Id);
             int idx = movies_list.FindIndex(b => b.Id == intId);
@@ -74,17 +74,27 @@ namespace WcfServiceLibrary
             return "Removed item with ID=" + Id;
         }
 
-        public List<Movie> getAllXml()
+        public List<Movie> getAllMoviesXml()
         {
             return movies_list;
         }
 
-        public Movie getByIdXml(string Id)
+        public Movie getByIdMoviesXml(string Id)
         {
             int intId = int.Parse(Id);
             int idx = movies_list.FindIndex(b => b.Id == intId);
             if (idx == -1)
                 return null;
+            return movies_list.ElementAt(idx);
+        }
+
+        public Movie getByIdNextMovieJson(string Id)
+        {
+            int intId = int.Parse(Id);
+            int idx = movies_list.FindIndex(b => b.Id == intId);
+            if (idx == -1)
+                return null;
+            idx = (idx + 1) % movies_list.Count();
             return movies_list.ElementAt(idx);
         }
 
@@ -94,24 +104,24 @@ namespace WcfServiceLibrary
             return new DataString() { description = data };
         }
 
-        string ILibraryService.addJson(Movie item)
+        string ILibraryService.addMovieJson(Movie item)
         {
-            return addXml(item);
+            return addMoviesXml(item);
         }
 
-        string ILibraryService.deleteJson(string Id)
+        string ILibraryService.deleteMovieJson(string Id)
         {
-            return deleteXml(Id);
+            return deleteMovieXml(Id);
         }
 
-        List<Movie> ILibraryService.getAllJson()
+        List<Movie> ILibraryService.getAllMoviesJson()
         {
-            return getAllXml();
+            return getAllMoviesXml();
         }
 
-        Movie ILibraryService.getByIdJson(string Id)
+        Movie ILibraryService.getByIdMoviesJson(string Id)
         {
-            return getByIdXml(Id);
+            return getByIdMoviesXml(Id);
         }
     }
 }

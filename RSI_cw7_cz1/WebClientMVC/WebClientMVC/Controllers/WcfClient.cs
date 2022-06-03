@@ -111,5 +111,23 @@ namespace WebClientMVC.Controllers
             deleteId(movie.Id);
             postNewItem(movie);
         }
+
+        public static string getNext(int id)
+        {
+            HttpWebRequest req = WebRequest.Create(baseWebHttp + "/next/" + id) as HttpWebRequest;
+            req.KeepAlive = false;
+            req.Method = "GET";
+            req.ContentType = "application/json";
+
+            HttpWebResponse resp = req.GetResponse() as HttpWebResponse;
+            //przekodowanie tekstu odpowiedzi: 
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            Encoding enc = System.Text.Encoding.GetEncoding(1252);
+            StreamReader responseStream = new StreamReader(resp.GetResponseStream(), enc);
+            string responseString = responseStream.ReadToEnd();
+            responseStream.Close();
+            resp.Close();
+            return responseString;
+        }
     }
 }

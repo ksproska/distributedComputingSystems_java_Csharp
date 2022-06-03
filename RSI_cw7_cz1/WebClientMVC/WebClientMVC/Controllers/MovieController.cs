@@ -66,5 +66,13 @@ namespace WebClientMVC.Controllers
             }
             return View(movie);
         }
+
+        public string Next(int id)
+        {
+            //var indexOf = allMovies.IndexOf(allMovies.Where(x => x.Id == id).FirstOrDefault());
+            //var next = allMovies[indexOf + 1 % allMovies.Count()];
+            //return JSONHelper.ToJSON(next);
+            return WcfClient.getNext(id);
+        }
     }
 }

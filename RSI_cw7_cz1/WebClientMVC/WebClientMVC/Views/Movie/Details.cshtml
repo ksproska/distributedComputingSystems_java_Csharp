@@ -13,25 +13,25 @@
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Id)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-10" id="Id">
             @Html.DisplayFor(model => model.Id)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Title)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-10" id="Title">
             @Html.DisplayFor(model => model.Title)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Length)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-10" id="Length">
             @Html.DisplayFor(model => model.Length)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Director)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-10" id="Director">
             @Html.DisplayFor(model => model.Director)
         </dd>
     </dl>
@@ -40,3 +40,26 @@
     @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
     <a asp-action="Index">Back to List</a>
 </div>
+<div>
+    <button id="more-btn" class="form-control" onclick="jsAjax()"> Load next movie </button>
+</div>
+<script>
+    function jsAjax() {
+        let id = document.getElementById("Id");
+        let title = document.getElementById("Title");
+        let length = document.getElementById("Length");
+        let director = document.getElementById("Director");
+
+        let url = '@Url.Action("Next")' + '/' + id.innerHTML;
+        fetch(url)
+            .then(res => res.json())
+            .then((out) => {
+                console.log(out);
+                console.log();
+                id.innerHTML = out['Id'];
+                title.innerHTML = out['Title'];
+                length.innerHTML = out['Length'];
+                director.innerHTML = out['Director'];
+            }).catch(err => console.error(err));
+    }
+</script>
