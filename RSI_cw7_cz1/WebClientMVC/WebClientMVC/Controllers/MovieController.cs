@@ -12,8 +12,15 @@ namespace WebClientMVC.Controllers
         private static List<Movie> allMovies = new List<Movie>();
         public IActionResult Index()
         {
-            allMovies = WcfClient.getItems();
-            return View(allMovies);
+            try
+            {
+                allMovies = WcfClient.getItems();
+                return View(allMovies);
+            }
+            catch (Exception ex)
+            {
+                return View("ServiceNotRunning");
+            }
         }
 
         public IActionResult Details(int? id)
@@ -37,8 +44,15 @@ namespace WebClientMVC.Controllers
 
             if (ModelState.IsValid)
             {
-                WcfClient.editId(movie);
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    WcfClient.editId(movie);
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (Exception ex)
+                {
+                    return View("ServiceNotRunning");
+                }
             }
             return View(movie);
         }
@@ -46,7 +60,14 @@ namespace WebClientMVC.Controllers
         public IActionResult Delete(int? id)
         {
             var movie = allMovies.Where(m => m.Id == id).FirstOrDefault();
-            WcfClient.deleteId(movie.Id);
+            try
+            {
+                WcfClient.deleteId(movie.Id);
+            }
+            catch (Exception ex)
+            {
+                return View("ServiceNotRunning");
+            }
             return RedirectToAction(nameof(Index));
         }
 
@@ -61,8 +82,15 @@ namespace WebClientMVC.Controllers
             if (ModelState.IsValid)
             {
                 movie.Id = allMovies.Last().Id + 1;
-                WcfClient.postNewItem(movie);
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    WcfClient.postNewItem(movie);
+                    return RedirectToAction(nameof(Index));
+                }
+                catch(Exception ex)
+                {
+                    return View("ServiceNotRunning");
+                }
             }
             return View(movie);
         }

@@ -121,3 +121,12 @@ F:\rozproszone_systemy\RSI_cw7_cz1\WebClientMVC\WebClientMVC\bin\Debug\net5.0\Mi
 F:\rozproszone_systemy\RSI_cw7_cz1\WebClientMVC\WebClientMVC\bin\Debug\net5.0\Nancy.dll
 F:\rozproszone_systemy\RSI_cw7_cz1\WebClientMVC\WebClientMVC\obj\Debug\net5.0\Razor\Views\Movie\Edit.cshtml.g.cs
 F:\rozproszone_systemy\RSI_cw7_cz1\WebClientMVC\WebClientMVC\obj\Debug\net5.0\Razor\Views\Movie\Create.cshtml.g.cs
+F:\rozproszone_systemy\RSI_cw7_cz1\WebClientMVC\WebClientMVC\obj\Debug\net5.0\Razor\Views\Shared\ServiceNotRunning.cshtml.g.cs
+F:\rozproszone_systemy\RSI_cw7_cz1\WebClientMVC\WebClientMVC\obj\Debug\net5.0\Razor\Views\MyData\Index.cshtml.g.cs
+F:\rozproszone_systemy\RSI_cw7_cz1\WebClientMVC\WebClientMVC\bin\Debug\net5.0\System.Web.Mvc.dll
+F:\rozproszone_systemy\RSI_cw7_cz1\WebClientMVC\WebClientMVC\bin\Debug\net5.0\System.Web.Razor.dll
+F:\rozproszone_systemy\RSI_cw7_cz1\WebClientMVC\WebClientMVC\bin\Debug\net5.0\System.Web.Helpers.dll
+F:\rozproszone_systemy\RSI_cw7_cz1\WebClientMVC\WebClientMVC\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
+F:\rozproszone_systemy\RSI_cw7_cz1\WebClientMVC\WebClientMVC\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
+F:\rozproszone_systemy\RSI_cw7_cz1\WebClientMVC\WebClientMVC\bin\Debug\net5.0\System.Web.WebPages.dll
+F:\rozproszone_systemy\RSI_cw7_cz1\WebClientMVC\WebClientMVC\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll

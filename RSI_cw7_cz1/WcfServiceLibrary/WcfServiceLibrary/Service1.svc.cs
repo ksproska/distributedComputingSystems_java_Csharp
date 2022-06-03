@@ -20,7 +20,6 @@ namespace WcfServiceLibrary
             var dateNow = DateTime.Now.ToString("yyyy'/'MM'/'dd' 'HH':'mm':'ss");
             toReturn += dateNow + "\n";
             toReturn += "Kamila Sproska 254534" + "\n";
-            toReturn += "Marta Kuchciak 254568" + "\n";
             toReturn += Environment.OSVersion.VersionString + "\n";
             toReturn += Environment.UserName + "\n";
             toReturn += Environment.Version.ToString() + "\n";

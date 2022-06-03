@@ -31,6 +31,28 @@ namespace WebClientMVC.Controllers
     public class WcfClient
     {
         private static string baseWebHttp = "http://localhost:52680/Service1.svc/json/movies";
+        private static string dataWebHttp = "http://localhost:52680/Service1.svc/mydata";
+
+        public static string getMyData()
+        {
+            HttpWebRequest req = WebRequest.Create(dataWebHttp) as HttpWebRequest;
+            req.KeepAlive = false;
+            req.ContentType = "application/json";
+            HttpWebResponse resp = req.GetResponse() as HttpWebResponse;
+            //przekodowanie tekstu odpowiedzi: 
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            Encoding enc = System.Text.Encoding.GetEncoding(1252);
+            StreamReader responseStream = new StreamReader(resp.GetResponseStream(), enc);
+            string responseString = responseStream.ReadToEnd();
+            responseStream.Close();
+
+            resp.Close();
+
+            dynamic stuff1 = Newtonsoft.Json.JsonConvert.DeserializeObject(responseString);
+            return stuff1["description"];
+
+            return responseString;
+        }
         public static string getAllCurrentItems()
         {
             HttpWebRequest req = WebRequest.Create(baseWebHttp) as HttpWebRequest;
@@ -68,7 +90,7 @@ namespace WebClientMVC.Controllers
         public static string postNewItem(Movie movie)
         {
             string jsonFile = JSONHelper.ToJSON(movie);
-            System.Diagnostics.Debug.WriteLine(jsonFile);
+            //System.Diagnostics.Debug.WriteLine(jsonFile);
             HttpWebRequest req = WebRequest.Create(baseWebHttp) as HttpWebRequest;
             req.KeepAlive = false;
             req.Method = "POST";

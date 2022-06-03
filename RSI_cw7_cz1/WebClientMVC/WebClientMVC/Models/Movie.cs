@@ -24,6 +24,7 @@ namespace WebClientMVC.Models
         [JsonProperty("Title")]
         public string Title { get; set; }
         [Required]
+        [Range(0, int.MaxValue, ErrorMessage = "Please enter positive number")]
         [JsonProperty("Length")]
         public int Length { get; set; }
         [Required]

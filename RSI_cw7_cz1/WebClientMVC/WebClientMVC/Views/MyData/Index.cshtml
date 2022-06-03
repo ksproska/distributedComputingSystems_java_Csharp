@@ -1,0 +1,26 @@
+﻿@model WebClientMVC.Models.MyData
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<div>
+    <h4>MyData</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InfoClient)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.Raw(Html.Encode(Model.InfoClient).Replace("&#xA;", "<br />"))
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.InfoService)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.Raw(Html.Encode(Model.InfoService).Replace("&#xA;", "<br />"))
+        </dd>
+    </dl>
+</div>
