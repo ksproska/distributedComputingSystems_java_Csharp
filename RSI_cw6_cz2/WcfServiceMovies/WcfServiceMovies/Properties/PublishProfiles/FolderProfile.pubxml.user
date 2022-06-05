@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\mkuch\Desktop\roboczy</_PublishTargetUrl>
+    <History>True|2022-05-30T06:14:21.5690744Z;True|2022-05-30T07:53:25.9841581+02:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/WcfServiceMovies.dll">
+      <publishTime>05/30/2022 08:14:21</publishTime>
+    </File>
+    <File Include="bin/WcfServiceMovies.pdb">
+      <publishTime>05/30/2022 08:14:21</publishTime>
+    </File>
+    <File Include="MoviesService.svc">
+      <publishTime>05/29/2022 21:28:06</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/30/2022 07:53:25</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

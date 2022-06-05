@@ -42,16 +42,90 @@ namespace WcfServiceLibrary
         string addMovieJson(Movie item);
 
         [OperationContract]
-        [WebInvoke(UriTemplate = "/movies/{id}", Method = "DELETE")] //"Xxx{id}"
+        [WebInvoke(UriTemplate = "/movies/{id}", Method = "DELETE")] 
         string deleteMovieXml(string Id);
 
         [OperationContract]
-        [WebInvoke(UriTemplate = "/json/movies/{id}", Method = "DELETE", ResponseFormat = WebMessageFormat.Json)] //"Xxx{id}"
+        [WebInvoke(UriTemplate = "/json/movies/{id}", Method = "DELETE", ResponseFormat = WebMessageFormat.Json)] 
         string deleteMovieJson(string Id);
 
         [OperationContract]
         [WebGet(UriTemplate = "/mydata", ResponseFormat = WebMessageFormat.Json)]
         DataString getMyData();
+
+        //Book
+        [OperationContract]
+        [WebGet(UriTemplate = "/books")]
+        List<Book> getAllBooksXml();
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/json/books", ResponseFormat = WebMessageFormat.Json)]
+        List<Book> getAllBooksJson();
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/books/{id}", ResponseFormat = WebMessageFormat.Xml)]
+        Book getByIdBooksXml(string Id);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/json/books/{id}", ResponseFormat = WebMessageFormat.Json)]
+        Book getByIdBooksJson(string Id);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/json/books/next/{id}", ResponseFormat = WebMessageFormat.Json)]
+        Book getByIdNextBookJson(string Id);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "/books", Method = "POST", ResponseFormat = WebMessageFormat.Xml)]
+        string addBooksXml(Book item);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "/json/books", Method = "POST", ResponseFormat = WebMessageFormat.Json)]
+        string addBookJson(Book item);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "/books/{id}", Method = "DELETE")] 
+        string deleteBookXml(string Id);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "/json/books/{id}", Method = "DELETE", ResponseFormat = WebMessageFormat.Json)] 
+        string deleteBookJson(string Id);
+
+        //Music
+        [OperationContract]
+        [WebGet(UriTemplate = "/musics")]
+        List<Music> getAllMusicsXml();
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/json/musics", ResponseFormat = WebMessageFormat.Json)]
+        List<Music> getAllMusicsJson();
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/musics/{id}", ResponseFormat = WebMessageFormat.Xml)]
+        Music getByIdMusicsXml(string Id);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/json/musics/{id}", ResponseFormat = WebMessageFormat.Json)]
+        Music getByIdMusicsJson(string Id);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "/json/musics/next/{id}", ResponseFormat = WebMessageFormat.Json)]
+        Music getByIdNextMusicJson(string Id);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "/musics", Method = "POST", ResponseFormat = WebMessageFormat.Xml)]
+        string addMusicsXml(Music item);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "/json/musics", Method = "POST", ResponseFormat = WebMessageFormat.Json)]
+        string addMusicJson(Music item);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "/musics/{id}", Method = "DELETE")]
+        string deleteMusicXml(string Id);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "/json/musics/{id}", Method = "DELETE", ResponseFormat = WebMessageFormat.Json)]
+        string deleteMusicJson(string Id);
     }
 
 

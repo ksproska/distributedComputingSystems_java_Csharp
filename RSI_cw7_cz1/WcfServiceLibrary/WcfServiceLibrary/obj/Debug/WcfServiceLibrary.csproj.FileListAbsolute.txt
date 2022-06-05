@@ -5,3 +5,10 @@ F:\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\obj\Debug
 F:\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\obj\Debug\WcfServiceLibrary.csproj.CoreCompileInputs.cache
 F:\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\obj\Debug\WcfServiceLibrary.dll
 F:\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\obj\Debug\WcfServiceLibrary.pdb
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\bin\WcfServiceLibrary.dll.config
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\bin\WcfServiceLibrary.dll
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\bin\WcfServiceLibrary.pdb
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\obj\Debug\WcfServiceLibrary.csproj.AssemblyReference.cache
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\obj\Debug\WcfServiceLibrary.csproj.CoreCompileInputs.cache
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\obj\Debug\WcfServiceLibrary.dll
+C:\Users\mkuch\IdeaProjects\rozproszone_systemy\RSI_cw7_cz1\WcfServiceLibrary\WcfServiceLibrary\obj\Debug\WcfServiceLibrary.pdb

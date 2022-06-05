@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\rozproszone_systemy\\RSI_cw7_cz1\\WebClientMVC\\WebClientMVC\\WebClientMVC.csproj": {}
+    "C:\\Users\\mkuch\\IdeaProjects\\rozproszone_systemy\\RSI_cw7_cz1\\WebClientMVC\\WebClientMVC\\WebClientMVC.csproj": {}
   },
   "projects": {
-    "F:\\rozproszone_systemy\\RSI_cw7_cz1\\WebClientMVC\\WebClientMVC\\WebClientMVC.csproj": {
+    "C:\\Users\\mkuch\\IdeaProjects\\rozproszone_systemy\\RSI_cw7_cz1\\WebClientMVC\\WebClientMVC\\WebClientMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\rozproszone_systemy\\RSI_cw7_cz1\\WebClientMVC\\WebClientMVC\\WebClientMVC.csproj",
+        "projectUniqueName": "C:\\Users\\mkuch\\IdeaProjects\\rozproszone_systemy\\RSI_cw7_cz1\\WebClientMVC\\WebClientMVC\\WebClientMVC.csproj",
         "projectName": "WebClientMVC",
-        "projectPath": "F:\\rozproszone_systemy\\RSI_cw7_cz1\\WebClientMVC\\WebClientMVC\\WebClientMVC.csproj",
-        "packagesPath": "C:\\Users\\ksproskaStacjonarny\\.nuget\\packages\\",
-        "outputPath": "F:\\rozproszone_systemy\\RSI_cw7_cz1\\WebClientMVC\\WebClientMVC\\obj\\",
+        "projectPath": "C:\\Users\\mkuch\\IdeaProjects\\rozproszone_systemy\\RSI_cw7_cz1\\WebClientMVC\\WebClientMVC\\WebClientMVC.csproj",
+        "packagesPath": "C:\\Users\\mkuch\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mkuch\\IdeaProjects\\rozproszone_systemy\\RSI_cw7_cz1\\WebClientMVC\\WebClientMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ksproskaStacjonarny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mkuch\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -71,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
