@@ -3,6 +3,21 @@ Exercises were executed using:
 - java (xmlrpc, RMI)
 - c# (gRPC, WCF, REST + AJAX)
 
+## Overview
+|            File            | language |               implementation               |
+|:--------------------------:|:--------:|:------------------------------------------:|
+|     [RSI_cw1](RSI_cw1)     |   java   |                   xmlrpc                   |
+| [RSI_cw1_cz2](RSI_cw1_cz2) |   java   |                   xmlrpc                   |
+| [RSI_cw2_cz1](RSI_cw2_cz1) |    c#    |                    gRPC                    |
+| [RSI_cw2_cz2](RSI_cw2_cz2) |    c#    |                    gRPC                    |
+| [RSI_cw3_cz1](RSI_cw3_cz1) |   java   |                    RMI                     |
+| [RSI_cw3_cz2](RSI_cw3_cz2) |   java   |            RMI - server worker             |
+| [RSI_cw4_cz1](RSI_cw4_cz1) |    c#    |                    WCF                     |
+| [RSI_cw4_cz2](RSI_cw4_cz2) |    c#    |                    WCF                     |
+| [RSI_cw6_cz1](RSI_cw6_cz1) |    c#    |                 WCF + REST                 |
+| [RSI_cw6_cz2](RSI_cw6_cz2) |    c#    |   WCF + REST + GUI client in .NET forms    |
+| [RSI_cw7_cz1](RSI_cw7_cz1) |    c#    | WCF + REST + AJAX + GUI client in .NET MVC |
+
 ## [RSI_cw1](RSI_cw1) - java xmlrpc
 ![image](https://user-images.githubusercontent.com/61067969/173017948-38d065ea-410f-438c-9b8d-6c7569855375.png)
 
