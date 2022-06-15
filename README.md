@@ -1,4 +1,5 @@
-# rozproszone_systemy
+# Distributed computing systems
+
 ## 1a
 ![image](https://user-images.githubusercontent.com/61067969/173017948-38d065ea-410f-438c-9b8d-6c7569855375.png)
 
